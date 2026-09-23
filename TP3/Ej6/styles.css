@@ -1,0 +1,66 @@
+/* Selector de etiqueta */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eeeeee;
+    color: #222222;
+    padding: 40px;
+}
+
+/* Selector de ID */
+#titulo {
+    text-align: center;
+    color: #c62828;
+    font-size: 40px;
+}
+
+/* Selector de etiqueta */
+p {
+    font-size: 16px;
+}
+
+/* Selector de clase */
+.card {
+    background-color: white;
+    width: 400px;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* Selector descendiente */
+.card p {
+    color: #555555;
+}
+
+/* Selector de clase */
+.precio {
+    font-weight: bold;
+    color: #c62828;
+}
+
+/* Selector de etiqueta */
+span {
+    background-color: #dddddd;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Mustang destacado */
+.destacado {
+    border: 3px solid #c62828;
+}
+
+/* Corolla híbrido */
+.hibrido {
+    border: 3px solid #2e7d32;
+}
+
+.hibrido span {
+    background-color: #c8e6c9;
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+.hibrido .precio {
+    color: #2e7d32;
+}

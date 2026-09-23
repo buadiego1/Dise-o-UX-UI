@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eeeeee;
+    margin: 0;
+    padding: 40px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    width: 300px;
+    height: 250px;
+
+    background-color: white;
+
+    /* Box Model */
+    margin: 10px;
+    padding: 25px;
+    border: 3px solid #333333;
+
+    border-radius: 10px;
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #c62828;
+}
+
+.card p {
+    font-size: 16px;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 - Tabla de Datos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Horario Semanal de Clases</h1>
+    </header>
+
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Hora</th>
+                    <th>Lunes</th>
+                    <th>Martes</th>
+                    <th>Miércoles</th>
+                    <th>Jueves</th>
+                    <th>Viernes</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th>08:00 - 10:00</th>
+                    <td>Programación</td>
+                    <td>Base de Datos</td>
+                    <td>Programación</td>
+                    <td>Ingenieria de Software</td>
+                    <td>Inglés</td>
+                </tr>
+
+                <tr>
+                    <th>10:00 - 12:00</th>
+                    <td>Diseño UX/UI</td>
+                    <td rowspan="2">Sistemas Operativos</td>
+                    <td>Redes</td>
+                    <td>Programación</td>
+                    <td>Base de Datos</td>
+                </tr>
+
+                <tr>
+                    <th>12:00 - 14:00</th>
+                    <td>Ingenieria de Software</td>
+                    <td>Inglés</td>
+                    <td>Redes</td>
+                    <td>Programación</td>
+                </tr>
+
+                <tr>
+                    <th>14:00 - 15:00</th>
+                    <td colspan="5">Recreo</td>
+                </tr>
+
+                <tr>
+                    <th>15:00 - 17:00</th>
+                    <td>Base de Datos</td>
+                    <td>Programación</td>
+                    <td>Diseño UX/UI</td>
+                    <td>Redes</td>
+                    <td>Ingenieria de Software</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="6">Horario correspondiente a la semana de clases</td>
+                </tr>
+            </tfoot>
+        </table>
+    </main>
+
+</body>
+</html>
