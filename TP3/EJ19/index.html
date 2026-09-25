@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 19 - Formulario Multi-Step</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <main class="contenedor">
+
+        <h1>MB Repuestos</h1>
+        <p class="subtitulo">Registro de cliente</p>
+
+
+        <!-- CONTROLES DE LOS PASOS -->
+
+        <input
+            type="radio"
+            name="paso"
+            id="paso1"
+            checked
+        >
+
+        <input
+            type="radio"
+            name="paso"
+            id="paso2"
+        >
+
+
+        <!-- INDICADOR DE PASOS -->
+
+        <div class="indicador">
+            <label for="paso1">1. Datos personales</label>
+            <label for="paso2">2. Datos de contacto</label>
+        </div>
+
+
+        <form action="#" method="post">
+
+            <!-- =========================
+                PASO 1
+                ========================= -->
+
+            <section class="paso paso-1">
+
+                <h2>Datos personales</h2>
+
+                <div class="campo">
+
+                    <label for="nombre">
+                        Nombre completo
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Ingresá tu nombre"
+                        required
+                    >
+
+                    <small>
+                        Campo obligatorio
+                    </small>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="dni">
+                        DNI
+                    </label>
+
+                    <input
+                        type="text"
+                        id="dni"
+                        name="dni"
+                        placeholder="Ej: 40123456"
+                        pattern="[0-9]{7,8}"
+                        required
+                    >
+
+                    <small>
+                        Ingresá entre 7 y 8 números
+                    </small>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="fecha">
+                        Fecha de nacimiento
+                    </label>
+
+                    <input
+                        type="date"
+                        id="fecha"
+                        name="fecha"
+                        required
+                    >
+
+                </div>
+
+
+                <label for="paso2" class="boton siguiente">
+                    Siguiente →
+                </label>
+
+            </section>
+
+
+            <!-- =========================
+                PASO 2
+                ========================= -->
+
+            <section class="paso paso-2">
+
+                <h2>Datos de contacto</h2>
+
+
+                <div class="campo">
+
+                    <label for="email">
+                        Correo electrónico
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="ejemplo@gmail.com"
+                        required
+                    >
+
+                    <small>
+                        Ingresá un correo válido
+                    </small>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="telefono">
+                        Teléfono
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="telefono"
+                        name="telefono"
+                        placeholder="Ej: 3442123456"
+                        pattern="[0-9]{8,12}"
+                        required
+                    >
+
+                    <small>
+                        Solo números
+                    </small>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="direccion">
+                        Dirección
+                    </label>
+
+                    <input
+                        type="text"
+                        id="direccion"
+                        name="direccion"
+                        placeholder="Ingresá tu dirección"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="botones">
+
+                    <label for="paso1" class="boton volver">
+                        ← Volver
+                    </label>
+
+                    <button type="submit">
+                        Crear cuenta
+                    </button>
+
+                </div>
+
+            </section>
+
+        </form>
+
+    </main>
+
+</body>
+</html>

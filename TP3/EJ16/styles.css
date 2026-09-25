@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #eeeeee;
+    color: #222222;
+}
+
+
+/* ==========================
+HEADER
+   ========================== */
+
+header {
+    background-color: #222222;
+    color: white;
+
+    text-align: center;
+
+    padding: 35px;
+}
+
+header h1 {
+    margin: 0;
+
+    color: #c62828;
+}
+
+header p {
+    margin-bottom: 0;
+}
+
+
+/* ==========================
+CONTENIDO
+   ========================== */
+
+main {
+    width: 900px;
+    max-width: 90%;
+
+    margin: 50px auto;
+}
+
+h2 {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+
+/* ==========================
+PRODUCTOS
+   ========================== */
+
+.productos {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.producto {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    border: 1px solid #cccccc;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    /* Animación */
+
+    animation-name: aparecer;
+
+    animation-duration: 0.8s;
+
+    animation-timing-function: ease-out;
+
+    animation-iteration-count: 1;
+}
+
+.producto h3 {
+    color: #c62828;
+
+    margin-top: 0;
+}
+
+.producto strong {
+    font-size: 20px;
+}
+
+
+/* ==========================
+KEYFRAMES
+   ========================== */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}

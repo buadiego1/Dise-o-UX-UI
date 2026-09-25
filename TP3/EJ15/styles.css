@@ -1,0 +1,283 @@
+
+/* =========================================
+ESTILOS GENERALES
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eeeeee;
+    color: #222222;
+}
+
+
+/* =========================================
+GRID PRINCIPAL - DESKTOP
+   ========================================= */
+
+.layout {
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: 120px 1fr 70px;
+
+    grid-template-areas:
+        "header header"
+        "sidebar contenido"
+        "footer footer";
+}
+
+
+/* =========================================
+HEADER
+   ========================================= */
+
+.header {
+    grid-area: header;
+
+    background-color: #222222;
+    color: white;
+
+    padding: 25px 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header h1 {
+    margin: 0;
+    color: #c62828;
+}
+
+.header p {
+    margin: 5px 0 0;
+}
+
+
+/* =========================================
+SIDEBAR
+   ========================================= */
+
+.sidebar {
+    grid-area: sidebar;
+
+    background-color: #333333;
+    color: white;
+
+    padding: 25px;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+
+    padding: 10px;
+
+    border-radius: 5px;
+
+    transition: background-color 0.2s;
+}
+
+.sidebar a:hover {
+    background-color: #c62828;
+}
+
+
+/* =========================================
+CONTENIDO
+   ========================================= */
+
+.contenido {
+    grid-area: contenido;
+
+    padding: 40px;
+}
+
+.contenido h2 {
+    margin-top: 0;
+}
+
+
+/* =========================================
+PRODUCTOS
+   ========================================= */
+
+.productos {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.producto {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    border: 1px solid #cccccc;
+}
+
+.producto h3 {
+    margin-top: 0;
+    color: #c62828;
+}
+
+.producto p {
+    line-height: 1.5;
+}
+
+.producto strong {
+    font-size: 20px;
+    color: #222222;
+}
+
+
+/* =========================================
+FOOTER
+   ========================================= */
+
+.footer {
+    grid-area: footer;
+
+    background-color: #222222;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 10px;
+}
+
+
+/* =========================================
+BREAKPOINT 1
+Menos de 768px
+   ========================================= */
+
+@media (max-width: 767px) {
+
+    .layout {
+        grid-template-columns: 1fr;
+
+        grid-template-rows: 110px auto 1fr 70px;
+
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "contenido"
+            "footer";
+    }
+
+    /*
+    El sidebar no desaparece completamente,
+    se convierte en una barra horizontal.
+    */
+
+    .sidebar {
+        padding: 15px;
+    }
+
+    .sidebar h2 {
+        display: none;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .sidebar a {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .contenido {
+        padding: 25px 20px;
+    }
+
+    .productos {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================
+BREAKPOINT 2
+Menos de 480px
+   ========================================= */
+
+@media (max-width: 480px) {
+
+    .header {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .header p {
+        font-size: 14px;
+    }
+
+    .sidebar {
+        padding: 10px;
+    }
+
+    .sidebar nav {
+        gap: 4px;
+    }
+
+    .sidebar a {
+        font-size: 13px;
+        padding: 7px 8px;
+    }
+
+    .contenido {
+        padding: 20px 12px;
+    }
+
+    .contenido h2 {
+        font-size: 22px;
+    }
+
+    .producto {
+        padding: 18px;
+    }
+
+    .footer {
+        font-size: 13px;
+    }
+}

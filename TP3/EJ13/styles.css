@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eeeeee;
+    color: #222222;
+}
+
+/* Contenedor del formulario */
+
+.contenedor {
+    width: 500px;
+    max-width: 90%;
+    margin: 60px auto;
+    padding: 35px;
+
+    background-color: white;
+
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Título */
+
+h1 {
+    margin: 0;
+    text-align: center;
+    color: #c62828;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #666666;
+    margin-bottom: 30px;
+}
+
+/* Campos */
+
+.campo {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+/* Inputs y textarea */
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+
+    border: 2px solid #cccccc;
+    border-radius: 8px;
+
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
+}
+
+/* Tamaño del textarea */
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Estado :focus */
+
+input:focus,
+textarea:focus {
+    border-color: #c62828;
+    background-color: #fff8f8;
+
+    box-shadow: 0 0 0 3px rgba(198, 40, 40, 0.15);
+}
+
+/* Botón */
+
+button {
+    width: 100%;
+    padding: 14px;
+
+    background-color: #c62828;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.1s ease,
+        box-shadow 0.2s ease;
+}
+
+/* Estado :hover */
+
+button:hover {
+    background-color: #a51d1d;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estado :active */
+
+button:active {
+    background-color: #7f1515;
+    transform: scale(0.97);
+}

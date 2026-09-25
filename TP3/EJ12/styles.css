@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eeeeee;
+    color: #222222;
+}
+
+/* Encabezado */
+
+header {
+    height: 250px;
+    background-color: #222222;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 42px;
+}
+
+header p {
+    font-size: 20px;
+}
+
+/* Contenido */
+
+main {
+    width: 900px;
+    max-width: 90%;
+    margin: 40px auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Tarjetas */
+
+.repuestos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.repuesto {
+    width: 280px;
+    min-height: 220px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+}
+
+.repuesto h3 {
+    color: #c62828;
+}
+
+/* Contenedor padre del tooltip */
+
+.producto-tooltip {
+    position: relative;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+/* Botón */
+
+.producto-tooltip button {
+    background-color: #222222;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Tooltip */
+
+.tooltip {
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 200px;
+    padding: 10px;
+
+    background-color: #222222;
+    color: white;
+    text-align: center;
+
+    border-radius: 5px;
+
+    visibility: hidden;
+    opacity: 0;
+
+    z-index: 10;
+
+    transition: opacity 0.2s;
+}
+
+/* Mostrar tooltip al pasar el mouse */
+
+.producto-tooltip:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Botón volver arriba */
+
+.volver-arriba {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 55px;
+    height: 55px;
+
+    background-color: #c62828;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+
+    z-index: 100;
+}
+
+/* Tooltip del botón */
+
+.volver-arriba span {
+    position: absolute;
+
+    right: 65px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background-color: #222222;
+    color: white;
+
+    padding: 8px 12px;
+    border-radius: 5px;
+
+    font-size: 14px;
+    white-space: nowrap;
+
+    visibility: hidden;
+    opacity: 0;
+
+    z-index: 101;
+
+    transition: opacity 0.2s;
+}
+
+/* Mostrar tooltip del botón */
+
+.volver-arriba:hover span {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Efecto al pasar el mouse */
+
+.volver-arriba:hover {
+    background-color: #a51d1d;
+}

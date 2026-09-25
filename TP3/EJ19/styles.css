@@ -1,0 +1,304 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #eeeeee;
+    color: #222222;
+}
+
+
+/* =================================
+CONTENEDOR
+   ================================= */
+
+.contenedor {
+    width: 500px;
+    max-width: 92%;
+
+    margin: 50px auto;
+
+    padding: 35px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =================================
+TÍTULO
+   ================================= */
+
+h1 {
+    margin: 0;
+
+    text-align: center;
+
+    color: #c62828;
+}
+
+.subtitulo {
+    text-align: center;
+
+    color: #666666;
+
+    margin-bottom: 30px;
+}
+
+
+/* =================================
+RADIO BUTTONS
+Se utilizan para controlar
+los dos pasos.
+   ================================= */
+
+#paso1,
+#paso2 {
+    display: none;
+}
+
+
+/* =================================
+INDICADOR
+   ================================= */
+
+.indicador {
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 30px;
+}
+
+.indicador label {
+    flex: 1;
+
+    padding: 12px;
+
+    text-align: center;
+
+    background-color: #dddddd;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+}
+
+
+/* Paso seleccionado */
+
+#paso1:checked ~ .indicador label[for="paso1"],
+#paso2:checked ~ .indicador label[for="paso2"] {
+    background-color: #c62828;
+
+    color: white;
+}
+
+
+/* =================================
+PASOS
+   ================================= */
+
+.paso {
+    display: none;
+}
+
+
+/* Mostrar paso 1 */
+
+#paso1:checked ~ form .paso-1 {
+    display: block;
+}
+
+
+/* Mostrar paso 2 */
+
+#paso2:checked ~ form .paso-2 {
+    display: block;
+}
+
+
+.paso h2 {
+    margin-top: 0;
+
+    margin-bottom: 25px;
+}
+
+
+/* =================================
+CAMPOS
+   ================================= */
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-weight: bold;
+}
+
+.campo input {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 2px solid #cccccc;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.25s ease,
+        background-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =================================
+VALIDACIÓN
+   ================================= */
+
+/* Campo obligatorio vacío o inválido */
+
+.campo input:required:invalid {
+    border-color: #d32f2f;
+
+    background-color: #fff5f5;
+}
+
+
+/* Campo correctamente completado */
+
+.campo input:required:valid {
+    border-color: #2e7d32;
+
+    background-color: #f3fff4;
+}
+
+
+/* Cuando el usuario está escribiendo */
+
+.campo input:focus {
+    outline: none;
+
+    box-shadow: 0 0 0 3px rgba(198, 40, 40, 0.15);
+}
+
+
+/* Texto de ayuda */
+
+.campo small {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #777777;
+
+    font-size: 12px;
+}
+
+
+/* =================================
+BOTONES
+   ================================= */
+
+.botones {
+    display: flex;
+
+    gap: 10px;
+}
+
+.boton,
+button {
+    flex: 1;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    text-align: center;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.1s ease;
+}
+
+.siguiente,
+button {
+    background-color: #c62828;
+
+    color: white;
+}
+
+.volver {
+    background-color: #555555;
+
+    color: white;
+}
+
+
+/* Hover */
+
+.boton:hover,
+button:hover {
+    background-color: #a51d1d;
+}
+
+
+/* Volver hover */
+
+.volver:hover {
+    background-color: #333333;
+}
+
+
+/* Active */
+
+.boton:active,
+button:active {
+    transform: scale(0.97);
+}
+
+
+/* =================================
+RESPONSIVE
+   ================================= */
+
+@media (max-width: 500px) {
+
+    .contenedor {
+        padding: 25px 20px;
+
+        margin: 25px auto;
+    }
+
+    .indicador {
+        flex-direction: column;
+    }
+
+    .botones {
+        flex-direction: column;
+    }
+}

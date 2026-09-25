@@ -1,0 +1,157 @@
+
+/* VARIABLES DEL SITIO
+
+:root {
+    --color-primario: #c62828;
+    --color-secundario: #222222;
+    --color-fondo: #eeeeee;
+    --color-tarjeta: #ffffff;
+    --color-texto: #222222;
+    --color-texto-secundario: #666666;
+
+    --espaciado: 20px;
+    --espaciado-grande: 40px;
+
+    --radio: 10px;
+
+    --sombra: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/*MODO OSCURO
+
+/*
+:root {
+    --color-primario: #ef5350;
+    --color-secundario: #111111;
+    --color-fondo: #1e1e1e;
+    --color-tarjeta: #2b2b2b;
+    --color-texto: #ffffff;
+    --color-texto-secundario: #cccccc;
+}
+*/
+
+
+/* ESTILOS GENERALES
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+
+/*HEADER
+
+header {
+    background-color: var(--color-secundario);
+    color: white;
+
+    text-align: center;
+
+    padding: var(--espaciado-grande);
+}
+
+header h1 {
+    margin: 0;
+    color: var(--color-primario);
+}
+
+header p {
+    margin-bottom: 0;
+}
+
+
+/*CONTENIDO PRINCIPAL
+
+main {
+    width: 900px;
+    max-width: 90%;
+
+    margin: var(--espaciado-grande) auto;
+}
+
+
+/* PRESENTACIÓN
+.presentacion {
+    background-color: var(--color-tarjeta);
+
+    padding: var(--espaciado-grande);
+
+    border-radius: var(--radio);
+
+    box-shadow: var(--sombra);
+
+    text-align: center;
+}
+
+.presentacion h2 {
+    color: var(--color-primario);
+}
+
+.presentacion p {
+    color: var(--color-texto-secundario);
+}
+
+
+/* BOTÓN
+button {
+    background-color: var(--color-primario);
+    color: white;
+
+    border: none;
+
+    padding: var(--espaciado);
+
+    border-radius: var(--radio);
+
+    cursor: pointer;
+}
+
+
+/*TARJETAS
+.categorias {
+    display: flex;
+
+    gap: var(--espaciado);
+
+    margin-top: var(--espaciado-grande);
+}
+
+.card {
+    flex: 1;
+
+    background-color: var(--color-tarjeta);
+
+    padding: var(--espaciado);
+
+    border-radius: var(--radio);
+
+    box-shadow: var(--sombra);
+}
+
+.card h3 {
+    color: var(--color-primario);
+}
+
+.card p {
+    color: var(--color-texto-secundario);
+}
+
+
+/*FOOTER
+footer {
+    background-color: var(--color-secundario);
+    color: white;
+
+    text-align: center;
+
+    padding: var(--espaciado);
+}
