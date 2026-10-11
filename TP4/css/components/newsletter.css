@@ -1,0 +1,114 @@
+/* 5.8 Newsletter */
+.newsletter {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-8) var(--gutter);
+  overflow: hidden;
+}
+
+.newsletter__content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 560px;
+  text-align: center;
+  color: var(--color-espresso);
+}
+
+.newsletter__title {
+  font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+  font-weight: 600;
+}
+
+.newsletter__subtitle {
+  margin-top: var(--space-2);
+  font-size: var(--fs-base);
+  font-weight: 500;
+}
+
+.newsletter__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+.newsletter__input {
+  width: 100%;
+  height: 44px;
+  padding: 0 var(--space-4) 0 44px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  background: var(--color-bg) url("../../assets/icons/mail.svg") 14px center / 20px no-repeat;
+  color: var(--color-espresso);
+  font-family: var(--font-ui);
+  font-size: var(--fs-base);
+}
+
+.newsletter__input::placeholder {
+  color: var(--color-muted);
+}
+
+.newsletter__input:user-invalid {
+  border-color: var(--color-maroon);
+}
+
+.newsletter__btn {
+  height: 44px;
+  padding-inline: var(--space-5);
+  border-radius: var(--radius-pill);
+  background-color: var(--color-espresso);
+  color: var(--color-bg);
+  font-family: var(--font-ui);
+  font-size: var(--fs-base);
+  font-weight: 500;
+  transition: transform var(--transition);
+}
+
+.newsletter__btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Granos laterales ocultos en mobile */
+.newsletter__img {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .newsletter__form {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .newsletter__input {
+    width: 364px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .newsletter {
+    height: 320px;
+    padding-block: 0;
+  }
+
+  .newsletter__img {
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 482px;
+    max-width: 25%;
+    object-fit: cover;
+  }
+
+  .newsletter__img--left {
+    left: 0;
+  }
+
+  .newsletter__img--right {
+    right: 0;
+    transform: scaleX(-1);
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "coffea", "runtimeExecutable": "python", "runtimeArgs": ["-m", "http.server", "8000", "--directory", "TP4"], "port": 8000 }
+  ]
+}

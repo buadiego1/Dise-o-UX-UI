@@ -1,0 +1,63 @@
+/* 5.3 Categorías */
+.categories {
+  background-color: var(--color-sand);
+  padding: var(--space-7) var(--gutter);
+}
+
+.categories__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+  max-width: 845px;
+  margin-inline: auto;
+}
+
+.categories__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-md);
+  font-weight: 500;
+  color: var(--color-muted);
+  transition: color var(--transition);
+}
+
+.categories__item img {
+  width: 64px;
+  height: 64px;
+  transition: filter var(--transition);
+}
+
+.categories__item:hover {
+  color: var(--color-espresso);
+}
+
+.categories__item:hover img {
+  filter: brightness(0.6);
+}
+
+@media (min-width: 768px) {
+  .categories__list {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1024px) {
+  .categories {
+    display: flex;
+    align-items: center;
+    height: 220px;
+    padding-block: 0;
+  }
+
+  .categories__list {
+    width: 845px;
+  }
+
+  .categories__item img {
+    width: 82px;
+    height: 82px;
+  }
+}

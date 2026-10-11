@@ -1,0 +1,97 @@
+/* 5.4 / 5.5 Product card */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  background-color: var(--color-sand-20);
+  border: 1.5px solid var(--color-sand);
+  border-radius: var(--radius-card);
+  transition: box-shadow var(--transition);
+}
+
+.product-card__media {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-img);
+}
+
+.product-card__img {
+  width: 100%;
+  aspect-ratio: 334 / 364;
+  object-fit: cover;
+  transition: transform var(--transition);
+}
+
+/* Favorito: checkbox + label */
+.product-card__fav {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-circle);
+  background: var(--color-white) url("../../assets/icons/heart.svg") center / 24px no-repeat;
+  cursor: pointer;
+}
+
+.product-card__fav-input:checked + .product-card__fav {
+  background-image: url("../../assets/icons/heart-filled.svg");
+}
+
+.product-card__fav-input:focus-visible + .product-card__fav {
+  outline: 2px solid var(--color-white);
+  outline-offset: 3px;
+}
+
+.product-card__title {
+  font-family: var(--font-body);
+  font-size: var(--fs-card-title);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.product-card__desc {
+  font-family: var(--font-body);
+  font-size: var(--fs-lg);
+  line-height: 28px;
+  color: var(--color-maroon);
+}
+
+.product-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.product-card__price {
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  color: var(--color-maroon);
+}
+
+.product-card__btn {
+  padding: 10px 26px;
+  border-radius: var(--radius-btn);
+  background-color: var(--color-maroon);
+  color: var(--color-white);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  transition: transform var(--transition), background-color var(--transition);
+}
+
+.product-card__btn:hover {
+  transform: translateY(-2px);
+  background-color: var(--color-espresso);
+}
+
+@media (hover: hover) {
+  .product-card:hover {
+    box-shadow: 0 8px 24px var(--color-shadow);
+  }
+
+  .product-card:hover .product-card__img {
+    transform: scale(1.03);
+  }
+}

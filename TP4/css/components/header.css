@@ -1,0 +1,126 @@
+/* 5.1 Header / navegación */
+.header {
+  position: absolute;
+  top: var(--space-5);
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.header__logo {
+  margin-right: auto;
+  font-family: var(--font-display);
+  font-size: var(--fs-logo);
+  font-weight: 700;
+  text-transform: lowercase;
+  color: var(--color-white);
+}
+
+.header__link {
+  font-family: var(--font-ui);
+  font-size: var(--fs-md);
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--color-white);
+  transition: opacity var(--transition);
+}
+
+.header__link--login {
+  font-weight: 600;
+}
+
+.header__link:hover {
+  opacity: 0.75;
+}
+
+.header__link:focus-visible,
+.header__logo:focus-visible,
+.header__burger:focus-visible {
+  outline-color: var(--color-white);
+}
+
+.header__search {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-circle);
+  background-color: var(--color-white);
+  transition: transform var(--transition);
+}
+
+.header__search:hover {
+  transform: translateY(-2px);
+}
+
+/* Nav desktop oculto en mobile */
+.header__nav {
+  display: none;
+}
+
+/* Menú hamburguesa con <details> */
+.header__menu {
+  position: relative;
+}
+
+.header__burger {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.header__burger::-webkit-details-marker {
+  display: none;
+}
+
+.header__menu-list {
+  position: absolute;
+  top: calc(100% + var(--space-2));
+  right: 0;
+  min-width: 200px;
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  background-color: var(--color-espresso);
+  border-radius: var(--radius-card);
+}
+
+.header__menu-list .header__link {
+  display: block;
+  padding: var(--space-2);
+}
+
+@media (min-width: 1024px) {
+  .header {
+    top: 55px;
+  }
+
+  .header__nav {
+    display: block;
+  }
+
+  .header__list {
+    display: flex;
+    gap: var(--space-7);
+  }
+
+  .header__menu {
+    display: none;
+  }
+
+  .header__search {
+    width: 61px;
+    height: 61px;
+    margin-left: var(--space-7);
+  }
+}

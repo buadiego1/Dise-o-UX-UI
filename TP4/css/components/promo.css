@@ -1,0 +1,98 @@
+/* 5.6 CTA granos de café */
+.promo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-8) var(--gutter);
+  overflow: hidden;
+}
+
+.promo__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+  text-align: center;
+}
+
+.promo__title {
+  max-width: 372px;
+  font-family: var(--font-display);
+  font-size: var(--fs-cta);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--color-black);
+}
+
+.promo__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-width: 258px;
+  height: 51px;
+  padding-inline: var(--space-5);
+  border-radius: var(--radius-pill);
+  background-color: var(--color-espresso);
+  color: var(--color-bg);
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  font-weight: 500;
+  transition: transform var(--transition);
+}
+
+.promo__btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Imágenes decorativas ocultas en mobile */
+.promo__img {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .promo__img--left {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 30%;
+    object-fit: cover;
+  }
+
+  .promo__content {
+    margin-left: 30%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .promo {
+    height: 335px;
+    padding-block: 0;
+  }
+
+  .promo__img--left,
+  .promo__img--right {
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 520px;
+    max-width: 30%;
+    object-fit: cover;
+  }
+
+  .promo__img--right {
+    right: 0;
+    width: 503px;
+  }
+
+  .promo__content {
+    margin-left: 0;
+    flex-direction: row;
+    gap: var(--space-8);
+    text-align: left;
+  }
+}
