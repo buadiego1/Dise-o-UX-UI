@@ -1,0 +1,3 @@
+[build]
+  base = "TP4"
+  publish = "."
