@@ -511,3 +511,102 @@ a:active {
   transform: scaleY(var(--progress, 1));
   transform-origin: top;
 }
+
+/* Secciones */
+.section {
+  position: relative;
+  padding-block: var(--space-12);
+}
+
+.section > h2 + * {
+  margin-top: var(--space-8);
+}
+
+/* Cada título de sección es una parada de la línea */
+.stop {
+  position: relative;
+}
+
+.stop::before {
+  content: "";
+  position: absolute;
+  top: 0.1em;
+  left: calc(var(--rail) * -1);
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: -0.25rem;
+  border: 0.375rem solid var(--line);
+  border-radius: 50%;
+  background: var(--bg);
+}
+
+/* Métricas: placas de andén */
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-4);
+  border-radius: var(--radius-plate);
+  background: var(--surface-strong);
+  line-height: 1.3;
+}
+
+.metric__number {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 900;
+  line-height: 1;
+  color: var(--primary);
+}
+
+/* Skills */
+.skills {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-6);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-plate);
+  background: var(--surface);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.tags li {
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-pill);
+  background: var(--surface-strong);
+  font-size: var(--text-sm);
+  line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+  .metrics {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .skills {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1280px) {
+  .skills {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
