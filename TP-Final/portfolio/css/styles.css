@@ -610,3 +610,107 @@ a:active {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
+
+/* Proyectos */
+.projects {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.project {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-plate);
+  background: var(--surface);
+  transition: border-color var(--ease), transform var(--ease);
+}
+
+.project:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+}
+
+.project:active {
+  transform: translateY(-1px);
+}
+
+.project:focus-within {
+  border-color: var(--primary);
+}
+
+.project__image {
+  width: 100%;
+  aspect-ratio: 8 / 5;
+  object-fit: cover;
+  object-position: top;
+  border-bottom: 1px solid var(--line-rest);
+}
+
+.project__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-6);
+}
+
+.project__body .tags {
+  margin-top: auto;
+  padding-top: var(--space-2);
+}
+
+.project h3 {
+  font-size: var(--text-xl);
+}
+
+.project__link {
+  text-decoration: none;
+}
+
+/* Toda la tarjeta es clickeable */
+.project__link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.project__link:focus-visible {
+  outline: none;
+}
+
+.project__link:focus-visible::after {
+  outline: 3px solid var(--focus);
+  outline-offset: -5px;
+  border-radius: var(--radius-plate);
+}
+
+.project__year {
+  color: var(--text-soft);
+  font-size: var(--text-sm);
+}
+
+@media (min-width: 768px) {
+  .projects {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project--featured {
+    grid-column: 1 / -1;
+    flex-direction: row;
+  }
+
+  .project--featured .project__image {
+    flex: 3 1 0;
+    min-width: 0;
+    height: auto;
+    border-bottom: 0;
+    border-right: 1px solid var(--line-rest);
+  }
+
+  .project--featured .project__body {
+    flex: 2 1 0;
+  }
+}
