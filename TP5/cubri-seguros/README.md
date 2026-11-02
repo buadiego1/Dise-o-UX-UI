@@ -2,7 +2,7 @@
 
 Front-end de un checkout de seguro de celular: el usuario elige un producto, cotiza, elige un plan, carga sus datos, paga (simulado) y recibe su número de póliza. No hay backend ni pagos reales.
 
-**Sitio publicado:** https://buadiego1.github.io/Dise-o-UX-UI/TP5/cubri-seguros/
+**Sitio publicado:** https://cubriseguros1.netlify.app/
 
 **Diseño base:** [Figma](https://www.figma.com/design/vJrfOUfiOI7OSeTtRfCloh)
 
