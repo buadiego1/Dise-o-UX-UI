@@ -1,0 +1,67 @@
+.ds {
+  max-width: 60rem;
+  margin-inline: auto;
+  padding: var(--space-8) var(--gutter);
+}
+
+.ds h1 {
+  font-size: var(--text-2xl);
+}
+
+.ds h2 {
+  margin: var(--space-12) 0 var(--space-4);
+  font-size: var(--text-xl);
+}
+
+.ds-swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  gap: var(--space-4);
+}
+
+.ds-chip {
+  display: block;
+  height: 4rem;
+  margin-bottom: var(--space-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-plate);
+}
+
+.ds-c1 { background: #2438cc; }
+.ds-c2 { background: #1a2aa3; }
+.ds-c3 { background: #121c4e; }
+.ds-c4 { background: #ffc629; }
+.ds-c5 { background: #f4f6fb; }
+.ds-c6 { background: #e4e9f7; }
+.ds-c7 { background: #434c78; }
+.ds-c8 { background: #6a7299; }
+.ds-c9 { background: #0b7a55; }
+.ds-c10 { background: #be1e37; }
+
+.ds-t1,
+.ds-t2,
+.ds-t3,
+.ds-t4 {
+  font-family: var(--font-display);
+  line-height: 1.1;
+}
+
+.ds-t1 { font-size: 4rem; font-weight: 900; }
+.ds-t2 { font-size: var(--text-2xl); font-weight: 800; }
+.ds-t3 { font-size: var(--text-xl); font-weight: 700; }
+.ds-t4 { font-size: var(--text-lg); font-weight: 700; }
+.ds-t6 { font-size: var(--text-sm); }
+
+.ds-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.ds-hover { background: var(--primary-hover); border-color: var(--primary-hover); }
+.ds-active { background: var(--primary-active); border-color: var(--primary-active); }
+.ds-focus { outline: 3px solid var(--focus); outline-offset: 3px; }
+
+.ds-card { max-width: 24rem; }
+.ds-timeline { padding-left: var(--rail); }
+.ds-field { max-width: 24rem; }

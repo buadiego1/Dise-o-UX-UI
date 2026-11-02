@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Design system del portfolio</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="design-system.css">
+</head>
+<body>
+  <main class="ds">
+    <h1>Design system</h1>
+    <p>Referencia para pasar al archivo de Figma. Los valores son los de <code>css/tokens.css</code>.</p>
+
+    <h2>Paleta</h2>
+    <ul class="ds-swatches">
+      <li><span class="ds-chip ds-c1"></span>Primario #2438CC</li>
+      <li><span class="ds-chip ds-c2"></span>Primario hover #1A2AA3</li>
+      <li><span class="ds-chip ds-c3"></span>Texto y activo #121C4E</li>
+      <li><span class="ds-chip ds-c4"></span>Secundario #FFC629</li>
+      <li><span class="ds-chip ds-c5"></span>Fondo #F4F6FB</li>
+      <li><span class="ds-chip ds-c6"></span>Superficie fuerte #E4E9F7</li>
+      <li><span class="ds-chip ds-c7"></span>Texto suave #434C78</li>
+      <li><span class="ds-chip ds-c8"></span>Borde #6A7299</li>
+      <li><span class="ds-chip ds-c9"></span>Éxito #0B7A55</li>
+      <li><span class="ds-chip ds-c10"></span>Error #BE1E37</li>
+    </ul>
+
+    <h2>Escala tipográfica</h2>
+    <p>Títulos en Overpass y texto en Atkinson Hyperlegible, con escala de 1.25.</p>
+    <p class="ds-t1">Display, 176 px máximo</p>
+    <p class="ds-t2">H2, 48 px en desktop y 39 px en mobile</p>
+    <p class="ds-t3">Destacado, 25 px</p>
+    <p class="ds-t4">H3, 20 px</p>
+    <p>Texto, 17 px</p>
+    <p class="ds-t6">Detalle, 14 px</p>
+
+    <h2>Grilla y espaciado</h2>
+    <p>Espaciado en múltiplos de 4: 4, 8, 12, 16, 24, 32, 48, 64 y 96 px. Contenedor de 1200 px, márgenes de 16 px en mobile y 32 px desde 768 px. La línea ocupa un riel de 32, 48 o 64 px según el breakpoint.</p>
+
+    <h2>Botón en 4 estados</h2>
+    <div class="ds-row">
+      <span class="button">Normal</span>
+      <span class="button ds-hover">Hover</span>
+      <span class="button ds-active">Activo</span>
+      <button class="button" type="button" disabled>Deshabilitado</button>
+      <span class="button button--ghost">Secundario</span>
+      <span class="button ds-focus">Foco</span>
+    </div>
+
+    <h2>Tag</h2>
+    <ul class="tags"><li>Figma</li><li>Tailwind CSS</li><li>JavaScript</li></ul>
+
+    <h2>Tarjeta de proyecto</h2>
+    <article class="project ds-card">
+      <img class="project__image" src="../assets/img/cubri-inicio-800.webp" width="800" height="500" alt="Inicio de Cubrí Seguros.">
+      <div class="project__body">
+        <h3>Título del proyecto</h3>
+        <p class="project__year">2026, caso de estudio</p>
+        <p>Descripción breve y resultado.</p>
+        <ul class="tags"><li>Tag</li><li>Tag</li></ul>
+      </div>
+    </article>
+
+    <h2>Ítem de timeline</h2>
+    <ol class="timeline ds-timeline">
+      <li class="timeline__item">
+        <p class="timeline__period">2026</p>
+        <h3>Rol o cursada</h3>
+        <p class="timeline__place">Institución</p>
+        <ul class="timeline__list"><li>Logro uno.</li><li>Logro dos.</li></ul>
+      </li>
+    </ol>
+
+    <h2>Input</h2>
+    <div class="field ds-field">
+      <label for="demo">Email</label>
+      <input id="demo" type="email" value="nombre@dominio.com">
+    </div>
+  </main>
+</body>
+</html>
