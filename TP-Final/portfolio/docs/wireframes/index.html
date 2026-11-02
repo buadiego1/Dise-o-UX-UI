@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wireframes de baja fidelidad</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 32px; background: #fff; color: #222; font: 14px/1.4 Arial, sans-serif; }
+  h1 { font-size: 24px; margin: 0 0 24px; }
+  h2 { font-size: 16px; margin: 0 0 12px; }
+  .boards { display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start; }
+  .frame { border: 2px solid #222; background: #fff; position: relative; }
+  .mobile { width: 375px; }
+  .desktop { width: 1000px; }
+  .b { border: 1px dashed #777; background: #eee; padding: 8px; margin: 8px; font-size: 12px; }
+  .dark { background: #bbb; border-style: solid; }
+  .row { display: grid; gap: 8px; margin: 8px; }
+  .row .b { margin: 0; }
+  .c2 { grid-template-columns: 2fr 1fr; } .c3 { grid-template-columns: repeat(3, 1fr); } .c4 { grid-template-columns: repeat(4, 1fr); } .c2e { grid-template-columns: 1fr 1fr; }
+  .rail { margin-left: 24px; border-left: 4px solid #555; padding-left: 8px; }
+  .t { height: 56px; display: flex; align-items: center; }
+  .h { height: 120px; } .m { height: 80px; } .s { height: 40px; }
+</style>
+</head>
+<body>
+<h1>Portfolio de Diego Bua: wireframes de la página completa</h1>
+<div class="boards">
+  <section>
+    <h2>Mobile, 375 px</h2>
+    <div class="frame mobile">
+      <div class="b dark">Header fijo: iniciales, modo, hamburguesa</div>
+      <div class="b dark h">Hero a todo el ancho: badge, nombre grande, rol, propuesta, 2 CTA, ubicación</div>
+      <div class="rail">
+        <div class="b">Cifras en 2 x 2</div>
+        <div class="b s">Skills: h2</div><div class="b m">Categoría y chips</div><div class="b m">Categoría y chips</div><div class="b m">Categoría y chips</div>
+        <div class="b s">Proyectos: h2</div><div class="b h">Proyecto: imagen, título, año, resultado, tags</div><div class="b h">Proyecto</div><div class="b h">Proyecto</div>
+        <div class="b s">Experiencia: paradas sobre la línea</div><div class="b m">Ítem</div><div class="b m">Ítem</div>
+        <div class="b s">Sobre mí</div><div class="b m">Retrato</div><div class="b m">Texto</div><div class="b s">Principio</div><div class="b s">Principio</div><div class="b s">Principio</div>
+        <div class="b dark h">Contacto: CTA, email, redes, formulario</div>
+      </div>
+      <div class="b dark">Footer: navegación, redes, crédito</div>
+    </div>
+  </section>
+  <section>
+    <h2>Desktop, 1280 px (a escala)</h2>
+    <div class="frame desktop">
+      <div class="b dark">Header fijo: iniciales, anclas con indicador de sección, GitHub, modo, CTA</div>
+      <div class="b dark h">Hero a todo el ancho: nombre muy grande a la izquierda, propuesta y CTA debajo</div>
+      <div class="rail">
+        <div class="row c4"><div class="b s">Cifra</div><div class="b s">Cifra</div><div class="b s">Cifra</div><div class="b s">Cifra</div></div>
+        <div class="b s">Skills: h2</div><div class="row c4"><div class="b m">Categoría</div><div class="b m">Categoría</div><div class="b m">Categoría</div><div class="b m">Categoría</div></div>
+        <div class="b s">Proyectos: h2</div><div class="row c2"><div class="b h">Proyecto destacado con caso</div><div class="b h">Proyecto</div></div><div class="row c2"><div class="b m">Proyecto</div><div class="b m">Nota</div></div>
+        <div class="b s">Experiencia: paradas sobre la línea</div><div class="b s">Ítem</div><div class="b s">Ítem</div>
+        <div class="row c2"><div class="b h">Sobre mí: texto y 3 principios</div><div class="b h">Retrato</div></div>
+        <div class="row c2e dark"><div class="b dark h">Contacto: CTA, email, redes</div><div class="b dark h">Formulario</div></div>
+      </div>
+      <div class="b dark">Footer</div>
+    </div>
+  </section>
+</div>
+</body>
+</html>

@@ -1,0 +1,147 @@
+/* Design system: mismos valores que docs/design-system.html */
+@font-face {
+  font-family: "Overpass";
+  src: url("../assets/fonts/overpass-var.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("../assets/fonts/atkinson-400.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("../assets/fonts/atkinson-700.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+
+  /* Paleta base */
+  --blue-700: #2438cc;
+  --blue-800: #1a2aa3;
+  --blue-900: #121c4e;
+  --yellow-400: #ffc629;
+  --green-700: #0b7a55;
+  --red-700: #be1e37;
+
+  /* Roles */
+  --bg: #f4f6fb;
+  --surface: #ffffff;
+  --surface-strong: #e4e9f7;
+  --text: #121c4e;
+  --text-soft: #434c78;
+  --border: #6a7299;
+  --primary: var(--blue-700);
+  --primary-hover: var(--blue-800);
+  --primary-active: var(--blue-900);
+  --on-primary: #ffffff;
+  --secondary: var(--yellow-400);
+  --on-secondary: #121c4e;
+  --success: var(--green-700);
+  --error: var(--red-700);
+  --line: var(--blue-700);
+  --line-rest: #bcc5e8;
+  --hero-bg: var(--blue-700);
+  --hero-text: #ffffff;
+  --focus: #121c4e;
+
+  /* Tipografía: escala 1.25 */
+  --font-display: "Overpass", "Arial Narrow", Arial, sans-serif;
+  --font-body: "Atkinson Hyperlegible", Verdana, sans-serif;
+  --text-sm: 0.875rem;
+  --text-md: 1.0625rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5625rem;
+  --text-2xl: 2.4375rem;
+  --text-hero: clamp(3.75rem, 16vw, 11rem);
+
+  /* Espaciado: múltiplos de 4 */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+
+  /* Grilla */
+  --gutter: var(--space-4);
+  --rail: var(--space-8);
+  --container: 75rem;
+  --header-height: 4rem;
+
+  /* Forma */
+  --radius-plate: 0.5rem;
+  --radius-pill: 62.5rem;
+  --line-width: 0.375rem;
+  --ease: 180ms ease;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0e1538;
+  --surface: #182152;
+  --surface-strong: #232e6b;
+  --text: #f4f6fb;
+  --text-soft: #c5cbe8;
+  --border: #8a93c4;
+  --primary: var(--yellow-400);
+  --primary-hover: #ffd65f;
+  --primary-active: #e6ae12;
+  --on-primary: #121c4e;
+  --secondary: #2438cc;
+  --on-secondary: #ffffff;
+  --success: #5fd6ac;
+  --error: #ff9aa9;
+  --line: var(--yellow-400);
+  --line-rest: #39437f;
+  --hero-bg: #182152;
+  --focus: #ffc629;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #0e1538;
+    --surface: #182152;
+    --surface-strong: #232e6b;
+    --text: #f4f6fb;
+    --text-soft: #c5cbe8;
+    --border: #8a93c4;
+    --primary: var(--yellow-400);
+    --primary-hover: #ffd65f;
+    --primary-active: #e6ae12;
+    --on-primary: #121c4e;
+    --secondary: #2438cc;
+    --on-secondary: #ffffff;
+    --success: #5fd6ac;
+    --error: #ff9aa9;
+    --line: var(--yellow-400);
+    --line-rest: #39437f;
+    --hero-bg: #182152;
+    --focus: #ffc629;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter: var(--space-8);
+    --rail: var(--space-12);
+    --text-2xl: 3rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --rail: var(--space-16);
+  }
+}
