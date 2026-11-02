@@ -138,7 +138,7 @@
       </nav>
 
       <div class="grid items-start lg:grid-cols-[1fr_380px] lg:gap-8">
-        <form id="form-checkout" class="card gap-0 max-lg:rounded-none max-lg:border-0 max-lg:bg-transparent max-lg:pb-44 max-lg:shadow-none lg:border-line lg:p-6 lg:shadow-none" novalidate>
+        <form id="form-checkout" class="card sin-card-mobile gap-0 max-lg:pb-44 lg:border-line lg:shadow-none" novalidate>
 
           <!-- 02 · Cotizar (Paso 1) -->
           <section data-paso="1" hidden class="max-lg:p-5">
@@ -285,7 +285,7 @@
           </section>
 
           <!-- Acciones: footer fijo en mobile, al pie de la card en desktop -->
-          <footer class="z-30 max-lg:fixed max-lg:inset-x-0 max-lg:bottom-0 max-lg:border-t max-lg:border-line max-lg:bg-white max-lg:p-4 lg:mt-6 lg:border-t lg:border-line lg:pt-5">
+          <footer class="z-30 max-lg:fixed max-lg:flex-col max-lg:items-stretch max-lg:inset-x-0 max-lg:bottom-0 max-lg:border-t max-lg:border-line max-lg:bg-white max-lg:p-4 lg:mt-6 lg:border-t lg:border-line lg:pt-5">
             <p id="ayuda-boton" class="mb-2 text-center text-xs text-mute lg:hidden" role="status"></p>
             <div class="flex w-full items-center justify-between gap-4">
               <button type="button" class="btn w-36 max-lg:hidden" data-variant="outline" data-accion="volver">Volver</button>
@@ -308,7 +308,7 @@
 
     <!-- 06 · Éxito -->
     <section data-paso="5" hidden class="px-5 py-8 max-lg:pb-40 lg:py-4">
-      <div class="card mx-auto max-w-[37.5rem] items-center gap-3 p-0 text-center max-lg:rounded-none max-lg:border-0 max-lg:bg-transparent max-lg:shadow-none lg:border-line lg:p-10 lg:shadow-none">
+      <div class="card sin-card-mobile mx-auto max-w-[37.5rem] items-center gap-3 text-center lg:border-line lg:p-10 lg:shadow-none">
         <span class="grid size-20 place-items-center rounded-full bg-emerald-50 text-ok" aria-hidden="true">
           <svg class="size-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>
         </span>
@@ -317,15 +317,15 @@
         <p id="exito-poliza" class="rounded-lg bg-brand-50 px-4 py-2 font-bold tracking-wider text-brand-700"></p>
         <dl id="exito-detalle" class="mt-2 grid w-full grid-cols-[auto_1fr] gap-x-4 gap-y-1.5 rounded-xl border border-line bg-white p-4 text-left text-sm lg:border-0 lg:bg-page"></dl>
         <div class="flex w-full gap-3 max-lg:fixed max-lg:inset-x-0 max-lg:bottom-0 max-lg:z-20 max-lg:flex-col max-lg:gap-1 max-lg:border-t max-lg:border-line max-lg:bg-white max-lg:p-4 lg:mt-3">
-          <button type="button" class="btn flex-1" data-accion="descargar">Descargar póliza</button>
-          <button type="button" class="btn flex-1" data-variant="ghost" data-accion="reiniciar">Volver al inicio</button>
+          <button type="button" class="btn lg:flex-1" data-accion="descargar">Descargar póliza</button>
+          <button type="button" class="btn lg:flex-1" data-variant="ghost" data-accion="reiniciar">Volver al inicio</button>
         </div>
       </div>
     </section>
 
     <!-- 07 · Error de pago -->
     <section data-paso="6" hidden class="px-5 py-20 max-lg:pb-44 lg:py-4">
-      <div class="card mx-auto max-w-[37.5rem] items-center gap-3 p-0 text-center max-lg:rounded-none max-lg:border-0 max-lg:bg-transparent max-lg:shadow-none lg:border-line lg:p-10 lg:shadow-none">
+      <div class="card sin-card-mobile mx-auto max-w-[37.5rem] items-center gap-3 text-center lg:border-line lg:p-10 lg:shadow-none">
         <span class="grid size-20 place-items-center rounded-full bg-red-50 text-err" aria-hidden="true">
           <svg class="size-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
         </span>
@@ -335,8 +335,8 @@
           <section class="text-xs"><p>Tarjeta de prueba que fuerza el error: 4000 0000 0000 0002</p></section>
         </div>
         <div class="flex w-full gap-3 max-lg:fixed max-lg:inset-x-0 max-lg:bottom-0 max-lg:z-20 max-lg:flex-col max-lg:gap-2 max-lg:border-t max-lg:border-line max-lg:bg-white max-lg:p-4 lg:mt-3">
-          <button type="button" class="btn flex-1" data-accion="reintentar">Reintentar pago</button>
-          <button type="button" class="btn flex-1" data-variant="outline" data-accion="cambiar-pago">Cambiar medio de pago</button>
+          <button type="button" class="btn lg:flex-1" data-accion="reintentar">Reintentar pago</button>
+          <button type="button" class="btn lg:flex-1" data-variant="outline" data-accion="cambiar-pago">Cambiar medio de pago</button>
         </div>
       </div>
     </section>

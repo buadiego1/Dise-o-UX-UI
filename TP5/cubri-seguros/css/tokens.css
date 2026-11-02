@@ -70,6 +70,7 @@ body {
 
 .field[data-invalid] > input,
 .field[data-invalid] > select {
+  color: var(--foreground);
   border-color: var(--destructive);
   background-color: #FEF2F2;
 }
@@ -103,6 +104,19 @@ body {
 }
 
 @media (max-width: 63.99rem) {
+  /* En mobile el contenido va directo sobre el fondo, sin card */
+  .sin-card-mobile {
+    border: 0;
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: none;
+    padding-block: 0;
+  }
+
+  #form-checkout > footer {
+    border-radius: 0;
+  }
+
   #resumen[data-modo="oculto"] {
     display: none;
   }

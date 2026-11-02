@@ -48,3 +48,39 @@ export async function cargarPlanes() {
 
 // Campos que la persona ya visitó: solo ahí se muestran los errores
 export const tocados = new Set();
+
+// Bonus persistencia. Tarjeta, vencimiento y CVV quedan solo en memoria
+const CLAVE_SOLICITUD = 'cubri-solicitud';
+
+export function guardarSolicitud() {
+  const { paso, equipo, plan, titular, pago } = solicitud;
+  try {
+    if (paso === 5 || (paso === 0 && !equipo.marca)) {
+      localStorage.removeItem(CLAVE_SOLICITUD);
+      return;
+    }
+    localStorage.setItem(CLAVE_SOLICITUD, JSON.stringify({
+      paso: paso === 6 ? 4 : paso,
+      equipo,
+      plan,
+      titular,
+      pago: { metodo: pago.metodo, titular: pago.titular },
+    }));
+  } catch (error) {
+    console.warn('No se pudo guardar la solicitud', error);
+  }
+}
+
+export function restaurarSolicitud() {
+  try {
+    const guardada = JSON.parse(localStorage.getItem(CLAVE_SOLICITUD));
+    if (!guardada) return;
+    solicitud.paso = guardada.paso;
+    solicitud.plan = guardada.plan;
+    Object.assign(solicitud.equipo, guardada.equipo);
+    Object.assign(solicitud.titular, guardada.titular);
+    Object.assign(solicitud.pago, guardada.pago);
+  } catch (error) {
+    console.warn('No se pudo restaurar la solicitud', error);
+  }
+}

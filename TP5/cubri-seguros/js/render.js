@@ -1,5 +1,5 @@
 // Pinta cada paso a partir del estado. Nunca lee datos del DOM.
-import { solicitud, catalogo, tocados, leerCampo } from './estado.js';
+import { solicitud, catalogo, tocados, leerCampo, guardarSolicitud } from './estado.js';
 import { calcularCuota, formatearMoneda, FACTORES } from './cotizador.js';
 import { validarPaso } from './validaciones.js';
 
@@ -17,6 +17,8 @@ const ICONO_CHECK = '<svg class="size-3.5" viewBox="0 0 24 24" fill="none" strok
 const ICONO_CRUZ = '<svg class="size-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
 
 const $ = (id) => document.getElementById(id);
+
+let resumenPintado = '';
 
 // Lo que escribe el usuario nunca entra como HTML
 function escapar(texto) {
@@ -55,6 +57,8 @@ export function render() {
   renderStepper();
   renderCampos();
   renderValidacion();
+  if (solicitud.paso === 5) renderExito();
+  guardarSolicitud();
 }
 
 function renderStepper() {
@@ -121,10 +125,13 @@ function renderPlanes() {
   });
 }
 
-function fila(etiqueta, valor) {
+function fila(etiqueta, valor, pasoEditar) {
+  const editar = pasoEditar && solicitud.paso === 4
+    ? `<button type="button" class="ml-2 text-xs font-semibold text-brand underline" data-accion="editar" data-destino="${pasoEditar}" aria-label="Editar ${etiqueta.toLowerCase()}">Editar</button>`
+    : '';
   return `<div class="flex justify-between gap-4 text-[13px]">
     <span class="text-mute">${etiqueta}</span>
-    <strong class="text-right font-semibold">${escapar(valor)}</strong>
+    <span class="text-right"><strong class="font-semibold">${escapar(valor)}</strong>${editar}</span>
   </div>`;
 }
 
@@ -134,10 +141,10 @@ function renderResumen() {
   const equipoTexto = `${equipo.marca} ${equipo.modelo}`.trim() || '—';
   const plan = paso >= 2 ? planElegido() : null;
 
-  const filas = [fila('Seguro', 'Celular'), fila('Equipo', equipoTexto)];
+  const filas = [fila('Seguro', 'Celular'), fila('Equipo', equipoTexto, 1)];
   if (!plan) filas.push(fila('Valor', equipo.valor ? formatearMoneda(equipo.valor) : '—'));
-  if (plan) filas.push(fila('Plan', plan.nombre));
-  if (paso === 4) filas.push(fila('Titular', `${titular.nombre} ${titular.apellido}`));
+  if (plan) filas.push(fila('Plan', plan.nombre, 2));
+  if (paso === 4) filas.push(fila('Titular', `${titular.nombre} ${titular.apellido}`, 3));
 
   const cierre = plan
     ? `<div class="flex items-center justify-between border-t border-line pt-2 text-sm">
@@ -146,7 +153,7 @@ function renderResumen() {
        </div>`
     : '<p class="text-xs text-mute">Completá los datos del equipo para ver el precio.</p>';
 
-  $('resumen-contenido').innerHTML = `
+  const html = `
     <div class="res-detalle grid gap-2">
       ${filas.join('')}
       ${cierre}
@@ -157,8 +164,45 @@ function renderResumen() {
       <strong>${formatearMoneda(cuotaDe(plan))}/mes</strong>
     </div>` : ''}`;
 
+  // Reescribirlo sin cambios haría perder un clic en curso sobre "Editar"
+  if (html !== resumenPintado) {
+    $('resumen-contenido').innerHTML = html;
+    resumenPintado = html;
+  }
   $('resumen').dataset.modo = { 2: 'barra', 4: 'card' }[paso] ?? 'oculto';
 }
+
+function renderExito() {
+  const { equipo, titular, poliza } = solicitud;
+  const plan = planElegido();
+  $('exito-nombre').textContent = titular.nombre;
+  $('exito-email').textContent = titular.email;
+  $('exito-poliza').textContent = poliza;
+  $('exito-detalle').innerHTML = [
+    ['Plan', plan.nombre],
+    ['Equipo', `${equipo.marca} ${equipo.modelo}`],
+    ['Vigencia desde', new Date().toLocaleDateString('es-AR')],
+    ['Cuota mensual', formatearMoneda(cuotaDe(plan))],
+  ].map(([etiqueta, valor]) => `<dt class="text-mute">${etiqueta}</dt>
+    <dd class="text-right font-semibold">${escapar(valor)}</dd>`).join('');
+}
+
+// Texto del archivo que baja el botón "Descargar póliza"
+export function textoPoliza() {
+  const { equipo, titular, poliza } = solicitud;
+  const plan = planElegido();
+  return [
+    'Cubrí Seguros · Póliza simulada',
+    `Número: ${poliza}`,
+    `Titular: ${titular.nombre} ${titular.apellido}`,
+    `Equipo: ${equipo.marca} ${equipo.modelo}`,
+    `Plan: ${plan.nombre}`,
+    `Cuota mensual: ${formatearMoneda(cuotaDe(plan))}`,
+  ].join('\n');
+}
+
+// Mientras se paga no se puede tocar nada: evita el pago doble
+export const procesando = { activo: false };
 
 // Muestra errores en línea y habilita el botón solo si todo es válido
 function renderValidacion() {
@@ -185,7 +229,10 @@ function renderValidacion() {
 
   const faltan = campos.filter((c) => c.error).map((c) => c.nombre);
   const ayuda = faltan.length ? `Completá para continuar: ${faltan.join(', ')}.` : '';
-  $('btn-continuar').disabled = faltan.length > 0;
+  $('btn-continuar').disabled = faltan.length > 0 || procesando.activo;
+  if (procesando.activo) $('btn-continuar').textContent = 'Procesando…';
+  document.querySelectorAll('#checkout [data-accion="volver"], #barra-mobile [data-accion="volver"]')
+    .forEach((boton) => { boton.disabled = procesando.activo; });
   $('ayuda-boton').textContent = ayuda;
   $('ayuda-boton').hidden = !ayuda;
   $('ayuda-boton-desktop').textContent = ayuda;
