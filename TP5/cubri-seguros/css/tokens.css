@@ -1,0 +1,135 @@
+/* Tokens del Figma: sobrescriben las variables de Basecoat */
+:root {
+  --primary: #4F46E5;            /* indigo-600 */
+  --primary-foreground: #FFFFFF;
+  --radius: 0.75rem;
+
+  --background: #F5F7FB;
+  --foreground: #0F172A;
+  --card: #FFFFFF;
+  --card-foreground: #0F172A;
+  --muted-foreground: #64748B;
+  --border: #E2E8F0;
+  --input: #E2E8F0;
+  --ring: #4F46E5;
+  --destructive: #DC2626;
+}
+
+body {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Las utilidades flex/grid no deben ganarle al atributo hidden */
+[hidden] {
+  display: none !important;
+}
+
+/* Escala tipográfica: H2 24/800 · lead 15/400 · label 13/600 · help 12/400 */
+.titulo {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.lead {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--muted-foreground);
+}
+
+.field {
+  gap: 0.375rem;
+}
+
+.field > label,
+.field .etiqueta {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.field > p {
+  font-size: 0.75rem;
+  line-height: 1.35;
+  color: var(--muted-foreground);
+}
+
+.field > p[role="alert"] {
+  color: var(--destructive);
+}
+
+.field > input:not([type="checkbox"]),
+.field > select {
+  width: 100%;
+  height: 2.875rem;
+  padding-inline: 0.75rem;
+  background-color: #FFFFFF;
+  font-size: 0.875rem;
+}
+
+.field[data-invalid] > input,
+.field[data-invalid] > select {
+  border-color: var(--destructive);
+  background-color: #FEF2F2;
+}
+
+.btn {
+  height: 3rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.btn:disabled {
+  opacity: 1;
+  background-color: #CBD5E1;
+  color: #FFFFFF;
+  border-color: #CBD5E1;
+}
+
+.btn[data-variant="outline"] {
+  border: 1.5px solid var(--primary);
+  background-color: #FFFFFF;
+  color: var(--primary);
+}
+
+.btn[data-variant="ghost"] {
+  color: var(--primary);
+}
+
+/* Regla de oro: un solo resumen. En mobile cambia de forma según el paso */
+#resumen .res-barra {
+  display: none;
+}
+
+@media (max-width: 63.99rem) {
+  #resumen[data-modo="oculto"] {
+    display: none;
+  }
+
+  #resumen[data-modo="barra"] {
+    position: fixed;
+    inset-inline: 0;
+    bottom: 5rem;
+    z-index: 20;
+    border-width: 1px 0 0;
+    border-radius: 0;
+    padding: 0.625rem 1.25rem;
+    box-shadow: none;
+  }
+
+  #resumen[data-modo="barra"] .res-barra {
+    display: flex;
+  }
+
+  #resumen[data-modo="barra"] .res-detalle {
+    display: none;
+  }
+
+  #resumen[data-modo="card"] {
+    order: -1;
+    margin: 1.25rem 1.25rem 0;
+    background-color: #EEF2FF;
+    border-color: #C7D2FE;
+  }
+}
