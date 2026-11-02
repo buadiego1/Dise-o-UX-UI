@@ -150,7 +150,123 @@
           </article>
         </div>
       </section>
+
+      <section id="experiencia" class="section" aria-labelledby="titulo-experiencia">
+        <h2 id="titulo-experiencia" class="stop">Experiencia y formación</h2>
+        <ol class="timeline">
+          <li class="timeline__item">
+            <p class="timeline__period">2026</p>
+            <h3>Trabajo final de Diseño UX-UI</h3>
+            <p class="timeline__place">FCyT, sede Concepción del Uruguay</p>
+            <ul class="timeline__list">
+              <li>Diseñé y publiqué este portfolio, desde el usuario objetivo hasta el test de usabilidad.</li>
+              <li>Definí un design system propio con contraste AA en modo claro y oscuro.</li>
+            </ul>
+          </li>
+          <li class="timeline__item">
+            <p class="timeline__period">2026</p>
+            <h3>Diseño UX-UI, cursada</h3>
+            <p class="timeline__place">Licenciatura en Sistemas de Información, FCyT</p>
+            <ul class="timeline__list">
+              <li>Construí el checkout de Cubrí Seguros con estado único y validaciones propias.</li>
+              <li>Maqueté la landing de Coffea con HTML y CSS, sin JavaScript.</li>
+            </ul>
+          </li>
+          <li class="timeline__item">
+            <p class="timeline__period"><span class="todo">Completar: año de ingreso</span></p>
+            <h3>Licenciatura en Sistemas de Información</h3>
+            <p class="timeline__place">FCyT, sede Concepción del Uruguay</p>
+            <ul class="timeline__list">
+              <li>Cursada en curso.</li>
+              <li><span class="todo">Completar: un logro de la carrera</span></li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+      <section id="sobre-mi" class="section" aria-labelledby="titulo-sobre-mi">
+        <h2 id="titulo-sobre-mi" class="stop">Sobre mí</h2>
+        <div class="about">
+          <div class="about__text">
+            <p class="about__intro">Estudio Sistemas de Información y me interesa el punto donde el diseño se encuentra con el código. Prefiero explicar por qué tomé una decisión antes que mostrar una pantalla sola.</p>
+            <ul class="principles">
+              <li class="principle">
+                <h3>Cada dato en un solo lugar</h3>
+                <p>En Cubrí todo sale de un único estado. Así volver atrás nunca borra nada.</p>
+              </li>
+              <li class="principle">
+                <h3>El error también se diseña</h3>
+                <p>Un mensaje claro y el foco en el campo correcto ayudan más que un formulario lindo.</p>
+              </li>
+              <li class="principle">
+                <h3>Las decisiones se escriben</h3>
+                <p>Documento qué cambié respecto del diseño y por qué, para que otra persona pueda seguirlo.</p>
+              </li>
+            </ul>
+          </div>
+          <img class="about__portrait" src="assets/img/retrato.svg" width="360" height="440" loading="lazy" alt="Ilustración de Diego Bua como plano de recorrido: una línea azul con tres paradas que termina en sus iniciales, DB.">
+        </div>
+      </section>
+
+      <section id="contacto" class="section contact" aria-labelledby="titulo-contacto">
+        <div class="contact__intro">
+          <h2 id="titulo-contacto">Hablemos de tu próximo proyecto</h2>
+          <p>Si buscás a alguien para una pasantía, un proyecto o un primer puesto, escribime.</p>
+          <p class="contact__email"><a href="mailto:buadiego9@gmail.com">buadiego9@gmail.com</a></p>
+          <div class="contact__actions">
+            <a class="button" href="mailto:buadiego9@gmail.com">Enviar un email</a>
+            <button class="button button--ghost copy-email" type="button" data-email="buadiego9@gmail.com">Copiar email</button>
+          </div>
+          <p class="copy-email__status" role="status"></p>
+          <ul class="contact__links">
+            <li><span class="todo">Completar: URL de LinkedIn</span></li>
+            <li><a href="https://github.com/buadiego1" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          </ul>
+        </div>
+        <form class="form" name="contacto" method="POST" action="gracias.html" data-netlify="true" netlify-honeypot="sitio-web">
+          <input type="hidden" name="form-name" value="contacto">
+          <p class="visually-hidden" aria-hidden="true"><label>No completar <input name="sitio-web" tabindex="-1" autocomplete="off"></label></p>
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+          </div>
+          <button class="button" type="submit">Enviar mensaje</button>
+        </form>
+      </section>
     </div>
   </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p class="logo logo--footer"><span class="logo__stop" aria-hidden="true"></span>Diego Bua</p>
+      <nav aria-label="Pie de página">
+        <ul class="site-footer__nav">
+          <li><a href="#metricas">Cifras</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#experiencia">Experiencia</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <ul class="site-footer__nav">
+        <li><a href="https://github.com/buadiego1" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="mailto:buadiego9@gmail.com">Email</a></li>
+        <li><span class="todo">Completar: LinkedIn</span></li>
+      </ul>
+      <p class="site-footer__legal">© 2026 Diego Bua. Hecho con HTML, CSS y JavaScript, publicado en Netlify.</p>
+    </div>
+  </footer>
+</body>
+</html>
+
 </body>
 </html>
