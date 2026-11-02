@@ -37,8 +37,8 @@ document.querySelector('.theme-toggle').addEventListener('click', () => {
   }
 });
 
-// Sección actual en la navegación
-const links = [...document.querySelectorAll('.site-nav__list a[href*="#"]')];
+// Sección actual en la navegación: solo en la página de los anclas
+const links = [...document.querySelectorAll('.site-nav__list a[href^="#"]')];
 const secciones = links
   .map((link) => document.querySelector(link.hash))
   .filter(Boolean);
