@@ -54,7 +54,7 @@
     <button type="button" data-accion="volver" class="grid size-8 place-items-center rounded-lg text-ink" aria-label="Volver">
       <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
     </button>
-    <p id="barra-titulo" class="text-base font-bold">Cotizá tu seguro</p>
+    <p id="barra-titulo" tabindex="-1" class="text-base font-bold outline-none"></p>
   </div>
 
   <main class="mx-auto max-w-[1440px] lg:px-20 lg:py-10">
@@ -131,7 +131,7 @@
     <!-- Checkout (pasos 1 a 4) -->
     <div id="checkout" hidden>
       <p class="hidden text-xs font-semibold text-brand lg:block">Seguro de Celular</p>
-      <h2 id="titulo-paso" tabindex="-1" class="titulo mb-5 hidden outline-none lg:mt-1 lg:block">Contanos sobre tu celular</h2>
+      <h2 id="titulo-paso" tabindex="-1" class="titulo mb-5 hidden outline-none lg:mt-1 lg:block"></h2>
 
       <nav aria-label="Progreso de la contratación" class="border-b border-line bg-white px-5 py-3 lg:mb-6 lg:rounded-xl lg:border lg:px-5">
         <ol id="stepper" class="flex items-center gap-2 text-xs font-semibold"></ol>
@@ -192,10 +192,9 @@
           <section data-paso="2" hidden class="max-lg:p-5">
             <fieldset>
               <legend class="sr-only">Elegí tu plan</legend>
-              <div id="lista-planes" class="grid gap-3 lg:grid-cols-3">
-                <label class="card cursor-pointer gap-1 border-line p-4 shadow-none"><strong>Básico</strong><span class="text-2xl font-extrabold">$ 2.000 <small class="text-xs font-normal text-mute">/ mes</small></span></label>
-                <label class="card cursor-pointer gap-1 border-2 border-brand p-4 shadow-none"><strong>Plus <span class="badge">Recomendado</span></strong><span class="text-2xl font-extrabold">$ 3.000 <small class="text-xs font-normal text-mute">/ mes</small></span></label>
-                <label class="card cursor-pointer gap-1 border-line p-4 shadow-none"><strong>Premium</strong><span class="text-2xl font-extrabold">$ 4.500 <small class="text-xs font-normal text-mute">/ mes</small></span></label>
+              <div id="lista-planes" class="grid gap-3 lg:grid-cols-3"></div>
+              <div id="error-planes" class="alert mt-3" data-variant="destructive" hidden>
+                <section class="text-xs"><p>No pudimos cargar los planes. Probá de nuevo en unos segundos.</p></section>
               </div>
             </fieldset>
           </section>
@@ -250,11 +249,11 @@
                 <legend class="sr-only">Medio de pago</legend>
                 <div>
                   <input id="metodo-credito" class="peer sr-only" type="radio" name="metodo" value="credito" data-campo="pago.metodo">
-                  <label for="metodo-credito" class="flex h-12 cursor-pointer items-center gap-3 rounded-xl border border-line bg-white px-3.5 text-sm font-semibold peer-checked:border-2 peer-checked:border-brand peer-focus-visible:ring-2 peer-focus-visible:ring-brand">Tarjeta de crédito</label>
+                  <label for="metodo-credito" class="before:size-5 before:rounded-full before:border-2 before:border-line peer-checked:before:border-[6px] peer-checked:before:border-brand flex h-12 cursor-pointer items-center gap-3 rounded-xl border border-line bg-white px-3.5 text-sm font-semibold peer-checked:border-2 peer-checked:border-brand peer-focus-visible:ring-2 peer-focus-visible:ring-brand">Tarjeta de crédito</label>
                 </div>
                 <div>
                   <input id="metodo-debito" class="peer sr-only" type="radio" name="metodo" value="debito" data-campo="pago.metodo">
-                  <label for="metodo-debito" class="flex h-12 cursor-pointer items-center gap-3 rounded-xl border border-line bg-white px-3.5 text-sm font-semibold peer-checked:border-2 peer-checked:border-brand peer-focus-visible:ring-2 peer-focus-visible:ring-brand">Tarjeta de débito</label>
+                  <label for="metodo-debito" class="before:size-5 before:rounded-full before:border-2 before:border-line peer-checked:before:border-[6px] peer-checked:before:border-brand flex h-12 cursor-pointer items-center gap-3 rounded-xl border border-line bg-white px-3.5 text-sm font-semibold peer-checked:border-2 peer-checked:border-brand peer-focus-visible:ring-2 peer-focus-visible:ring-brand">Tarjeta de débito</label>
                 </div>
               </fieldset>
               <div role="group" class="field col-span-full lg:col-span-1">
@@ -313,7 +312,7 @@
         <span class="grid size-20 place-items-center rounded-full bg-emerald-50 text-ok" aria-hidden="true">
           <svg class="size-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>
         </span>
-        <h2 class="titulo mt-3" tabindex="-1">¡Listo, <span id="exito-nombre"></span>!<br>Tu celular ya está protegido</h2>
+        <h2 class="titulo mt-3 outline-none" tabindex="-1">¡Listo, <span id="exito-nombre"></span>!<br>Tu celular ya está protegido</h2>
         <p class="text-sm text-mute">Te enviamos la póliza a <span id="exito-email"></span></p>
         <p id="exito-poliza" class="rounded-lg bg-brand-50 px-4 py-2 font-bold tracking-wider text-brand-700"></p>
         <dl id="exito-detalle" class="mt-2 grid w-full grid-cols-[auto_1fr] gap-x-4 gap-y-1.5 rounded-xl border border-line bg-white p-4 text-left text-sm lg:border-0 lg:bg-page"></dl>
@@ -330,7 +329,7 @@
         <span class="grid size-20 place-items-center rounded-full bg-red-50 text-err" aria-hidden="true">
           <svg class="size-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
         </span>
-        <h2 class="titulo mt-3" tabindex="-1">No pudimos procesar el pago</h2>
+        <h2 class="titulo mt-3 outline-none" tabindex="-1">No pudimos procesar el pago</h2>
         <p class="text-sm text-mute">La tarjeta fue rechazada. Revisá los datos o probá con otro medio de pago. Tus datos quedaron guardados.</p>
         <div class="alert text-left" data-variant="destructive">
           <section class="text-xs"><p>Tarjeta de prueba que fuerza el error: 4000 0000 0000 0002</p></section>

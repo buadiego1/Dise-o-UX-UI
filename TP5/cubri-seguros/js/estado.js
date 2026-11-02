@@ -32,5 +32,19 @@ export function escribirCampo(ruta, valor) {
 }
 
 export function reiniciarSolicitud() {
+  tocados.clear();
   Object.assign(solicitud, solicitudInicial());
 }
+
+// Planes cargados desde data/planes.json (no son datos del usuario)
+export const catalogo = { planes: [] };
+
+export async function cargarPlanes() {
+  if (catalogo.planes.length) return;
+  const respuesta = await fetch('data/planes.json');
+  if (!respuesta.ok) throw new Error(`planes.json: ${respuesta.status}`);
+  catalogo.planes = await respuesta.json();
+}
+
+// Campos que la persona ya visitó: solo ahí se muestran los errores
+export const tocados = new Set();
