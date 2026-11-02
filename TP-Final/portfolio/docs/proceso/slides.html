@@ -7,13 +7,13 @@
 <style>
   @page { size: 1280px 720px; margin: 0; }
   * { box-sizing: border-box; }
-  body { margin: 0; color: #121c4e; font: 22px/1.45 "Atkinson Hyperlegible", Verdana, sans-serif; }
-  section { position: relative; width: 1280px; height: 720px; padding: 64px 80px 64px 128px; overflow: hidden; page-break-after: always; background: #f4f6fb; }
-  section::before { content: ""; position: absolute; top: 0; bottom: 0; left: 64px; width: 6px; background: #2438cc; }
-  section::after { content: ""; position: absolute; top: 72px; left: 52px; width: 30px; height: 30px; border: 7px solid #2438cc; border-radius: 50%; background: #f4f6fb; }
-  .cover { background: #2438cc; color: #fff; }
-  .cover::before { background: #ffc629; }
-  .cover::after { border-color: #ffc629; background: #2438cc; }
+  body { margin: 0; color: #000; font: 22px/1.45 "Atkinson Hyperlegible", Verdana, sans-serif; }
+  section { position: relative; width: 1280px; height: 720px; padding: 64px 80px 64px 128px; overflow: hidden; page-break-after: always; background: #fff; }
+  section::before { content: ""; position: absolute; top: 0; bottom: 0; left: 64px; width: 6px; background: #000; }
+  section::after { content: ""; position: absolute; top: 72px; left: 52px; width: 30px; height: 30px; border: 7px solid #000; border-radius: 50%; background: #fff; }
+  .cover { background: #000; color: #fff; }
+  .cover::before { background: #fff; }
+  .cover::after { border-color: #fff; background: #000; }
   h1, h2 { margin: 0 0 32px; font-family: "Overpass", Arial, sans-serif; line-height: 1.05; }
   h1 { font-size: 112px; font-weight: 900; }
   h2 { font-size: 52px; font-weight: 800; }
@@ -21,19 +21,19 @@
   ul { margin: 0; padding-left: 24px; }
   li { margin-bottom: 10px; }
   table { width: 100%; border-collapse: collapse; font-size: 19px; }
-  th, td { padding: 10px 12px; border-bottom: 1px solid #6a7299; text-align: left; vertical-align: top; }
-  .pending { padding: 24px; border: 3px dashed #be1e37; border-radius: 8px; background: #fff; }
+  th, td { padding: 10px 12px; border-bottom: 1px solid #767676; text-align: left; vertical-align: top; }
+  .pending { padding: 24px; border: 3px dashed #000; border-radius: 8px; background: #fff; }
   .swatches { display: flex; gap: 12px; margin-top: 24px; }
-  .swatches span { width: 120px; height: 72px; border-radius: 8px; border: 1px solid #6a7299; }
+  .swatches span { width: 120px; height: 72px; border-radius: 8px; border: 1px solid #767676; }
 </style>
 </head>
 <body>
   <section class="cover"><h1>Portfolio de Diego Bua</h1><p>Proceso de diseño. Trabajo final de Diseño UX-UI, 2026.</p></section>
   <section><h2>Usuario objetivo</h2><p><strong>Carla Méndez</strong>, proto-persona: diseñadora senior que participa en la selección de juniors.</p><p>En menos de 30 segundos necesita saber:</p><ul><li>Qué hace Diego y en qué etapa está.</li><li>Si está disponible y cómo escribirle.</li><li>Qué proyecto abrir para ver el proceso.</li></ul></section>
   <section><h2>Benchmark</h2><table><tr><th>Portfolio</th><th>Funciona</th><th>No funciona para este caso</th></tr><tr><td>Brittany Chiang</td><td>Propuesta en una línea, salto al contenido</td><td>Sin llamado a contactar ni disponibilidad</td></tr><tr><td>Rauno Freiberg</td><td>Personalidad, copiar email con confirmación</td><td>Proyectos fuera de la portada</td></tr><tr><td>Paco Coursey</td><td>Lectura rápida, contacto directo</td><td>Proyectos sin proceso</td></tr></table></section>
-  <section><h2>Concepto: el recorrido</h2><p><strong>Claro, conectado, cuidadoso.</strong> Los trabajos de Diego son flujos, así que el sitio se lee como un plano de transporte: una línea une las secciones y las paradas marcan dónde estás.</p><div class="swatches"><span style="background:#2438cc"></span><span style="background:#121c4e"></span><span style="background:#ffc629"></span><span style="background:#f4f6fb"></span><span style="background:#0b7a55"></span><span style="background:#be1e37"></span></div></section>
+  <section><h2>Concepto: el recorrido</h2><p><strong>Claro, conectado, cuidadoso.</strong> Los trabajos de Diego son flujos, así que el sitio se lee como un plano de transporte: una línea une las secciones y las paradas marcan dónde estás.</p><div class="swatches"><span style="background:#000000"></span><span style="background:#333333"></span><span style="background:#767676"></span><span style="background:#c4c4c4"></span><span style="background:#efefef"></span><span style="background:#ffffff"></span></div></section>
   <section><h2>Arquitectura de información</h2><p>One-page con las 9 secciones en el orden de la consigna: primero la propuesta, después la evidencia y al final el contacto.</p><ul><li>Dos casos de estudio en páginas internas.</li><li>Card sorting del contenido propio en seis grupos.</li><li>El CTA de contacto queda siempre en el header en desktop.</li></ul></section>
-  <section><h2>Decisiones de diseño</h2><ul><li>Overpass viene de la señalética vial. Atkinson Hyperlegible prioriza la lectura.</li><li>Bloques de color plano en lugar de sombras, como las placas de andén.</li><li>El email se puede copiar con confirmación, una idea tomada del benchmark.</li><li>Modo claro y oscuro con contraste AA en ambos.</li></ul></section>
+  <section><h2>Decisiones de diseño</h2><ul><li>Overpass viene de la señalética vial. Atkinson Hyperlegible prioriza la lectura.</li><li>Bloques de color plano en lugar de sombras, como las placas de andén.</li><li>El email se puede copiar con confirmación, una idea tomada del benchmark.</li><li>Paleta en blanco, negro y grises, con contraste AA en modo claro y oscuro.</li></ul></section>
   <section><h2>Implementación</h2><ul><li>HTML, CSS y JavaScript vanilla, sin frameworks ni templates.</li><li>Tokens en variables CSS, mobile-first, probado en 375, 768 y 1280 px.</li><li>Fuentes autoalojadas e imágenes WebP.</li><li>Formulario con Netlify Forms y headers de seguridad.</li></ul></section>
   <section><h2>Hallazgos del test</h2><div class="pending"><p><strong>Pendiente.</strong> Completar con los resultados reales de las 3 sesiones, usando docs/proceso/03-test-de-usabilidad.md.</p></div></section>
   <section><h2>Cambios aplicados</h2><div class="pending"><p><strong>Pendiente.</strong> Completar con cada hallazgo, el cambio y su commit.</p></div></section>

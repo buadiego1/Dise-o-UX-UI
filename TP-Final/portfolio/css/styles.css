@@ -88,8 +88,8 @@ a:active {
   z-index: 100;
   padding: var(--space-3) var(--space-4);
   border-radius: var(--radius-plate);
-  background: var(--yellow-400);
-  color: var(--blue-900);
+  background: var(--primary);
+  color: var(--on-primary);
   font-weight: 700;
   transform: translateY(-200%);
 }
@@ -380,7 +380,7 @@ a:active {
   bottom: 0;
   left: calc(var(--gutter) + (var(--line-width) / -2) + 0.5rem);
   width: var(--line-width);
-  background: var(--yellow-400);
+  background: var(--white);
 }
 
 .hero__inner::after {
@@ -391,7 +391,7 @@ a:active {
   width: 1.5rem;
   height: 1.5rem;
   margin-left: -0.25rem;
-  border: 0.375rem solid var(--yellow-400);
+  border: 0.375rem solid var(--white);
   border-radius: 50%;
   background: var(--hero-bg);
 }
@@ -408,7 +408,7 @@ a:active {
   width: 0.75rem;
   height: 0.75rem;
   border-radius: 50%;
-  background: var(--yellow-400);
+  background: var(--white);
 }
 
 .hero h1 {
@@ -443,19 +443,19 @@ a:active {
 }
 
 .hero .button {
-  border-color: var(--yellow-400);
-  background: var(--yellow-400);
-  color: var(--blue-900);
+  border-color: var(--white);
+  background: var(--white);
+  color: var(--black);
 }
 
 .hero .button:hover {
-  border-color: #ffd65f;
-  background: #ffd65f;
+  border-color: var(--gray-200);
+  background: var(--gray-200);
 }
 
 .hero .button:active {
-  border-color: #e6ae12;
-  background: #e6ae12;
+  border-color: var(--gray-300);
+  background: var(--gray-300);
 }
 
 .hero .button--ghost {
@@ -467,13 +467,13 @@ a:active {
 .hero .button--ghost:hover {
   border-color: #ffffff;
   background: #ffffff;
-  color: var(--blue-900);
+  color: var(--black);
 }
 
 .hero .button--ghost:active {
   border-color: var(--surface-strong);
-  background: #e4e9f7;
-  color: var(--blue-900);
+  background: var(--gray-200);
+  color: var(--black);
 }
 
 .hero__place {
@@ -777,7 +777,7 @@ a:active {
   display: grid;
   gap: var(--space-2);
   padding: var(--space-4);
-  border-left: var(--line-width) solid var(--secondary);
+  border-left: var(--line-width) solid var(--line);
   border-radius: 0 var(--radius-plate) var(--radius-plate) 0;
   background: var(--surface-strong);
 }
@@ -795,7 +795,7 @@ a:active {
   margin-top: var(--space-12);
   padding: var(--space-6);
   border-radius: var(--radius-plate);
-  background: var(--blue-900);
+  background: var(--hero-bg);
   color: #ffffff;
 }
 
@@ -822,7 +822,7 @@ a:active {
 }
 
 .contact a:not(.button):active {
-  color: var(--yellow-400);
+  color: var(--white);
 }
 
 .contact h2 {
@@ -845,19 +845,19 @@ a:active {
 }
 
 .contact .button {
-  border-color: var(--yellow-400);
-  background: var(--yellow-400);
-  color: var(--blue-900);
+  border-color: var(--white);
+  background: var(--white);
+  color: var(--black);
 }
 
 .contact .button:hover {
-  border-color: #ffd65f;
-  background: #ffd65f;
+  border-color: var(--gray-200);
+  background: var(--gray-200);
 }
 
 .contact .button:active {
-  border-color: #e6ae12;
-  background: #e6ae12;
+  border-color: var(--gray-300);
+  background: var(--gray-300);
 }
 
 .contact .button--ghost {
@@ -869,7 +869,7 @@ a:active {
 .contact .button--ghost:hover {
   border-color: #ffffff;
   background: #ffffff;
-  color: var(--blue-900);
+  color: var(--black);
 }
 
 .contact :focus-visible {
@@ -895,7 +895,7 @@ a:active {
 }
 
 .contact .todo {
-  border-color: var(--yellow-400);
+  border-color: var(--white);
   background: transparent;
   color: #ffffff;
 }
@@ -920,17 +920,17 @@ a:active {
   width: 100%;
   min-height: 3rem;
   padding: var(--space-3);
-  border: 2px solid #8a93c4;
+  border: 2px solid #8c8c8c;
   border-radius: var(--radius-plate);
   background: #ffffff;
-  color: var(--blue-900);
+  color: var(--black);
   font: inherit;
   transition: border-color var(--ease);
 }
 
 .field input:hover,
 .field textarea:hover {
-  border-color: var(--yellow-400);
+  border-color: var(--white);
 }
 
 .form .button {
@@ -1082,4 +1082,10 @@ a:active {
 
 .timeline__period .todo {
   margin-bottom: var(--space-2);
+}
+
+/* Las capturas de los proyectos siguen la paleta del sitio */
+.project__image,
+.case__figure img {
+  filter: grayscale(1);
 }

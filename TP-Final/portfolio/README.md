@@ -11,7 +11,7 @@ Portfolio web personal para Diseño UX-UI 2026, Licenciatura en Sistemas de Info
 
 ## Antes de entregar
 
-El sitio marca con un recuadro punteado rojo lo que falta completar. Para encontrar todo:
+El sitio marca con un recuadro punteado lo que falta completar. Para encontrar todo:
 
 ```bash
 grep -rn "Completar:" --include=*.html .

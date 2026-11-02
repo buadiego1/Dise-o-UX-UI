@@ -27,16 +27,14 @@
   border-radius: var(--radius-plate);
 }
 
-.ds-c1 { background: #2438cc; }
-.ds-c2 { background: #1a2aa3; }
-.ds-c3 { background: #121c4e; }
-.ds-c4 { background: #ffc629; }
-.ds-c5 { background: #f4f6fb; }
-.ds-c6 { background: #e4e9f7; }
-.ds-c7 { background: #434c78; }
-.ds-c8 { background: #6a7299; }
-.ds-c9 { background: #0b7a55; }
-.ds-c10 { background: #be1e37; }
+.ds-c1 { background: #000000; }
+.ds-c2 { background: #ffffff; }
+.ds-c3 { background: #333333; }
+.ds-c4 { background: #555555; }
+.ds-c5 { background: #4a4a4a; }
+.ds-c6 { background: #767676; }
+.ds-c7 { background: #c4c4c4; }
+.ds-c8 { background: #efefef; }
 
 .ds-t1,
 .ds-t2,
