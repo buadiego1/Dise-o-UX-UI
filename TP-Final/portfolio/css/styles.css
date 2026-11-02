@@ -1079,3 +1079,7 @@ a:active {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
+.timeline__period .todo {
+  margin-bottom: var(--space-2);
+}
