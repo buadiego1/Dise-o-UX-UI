@@ -53,7 +53,7 @@ Ejercicio cerrado, hecho por el autor con el contenido propio. Es una organizaci
 | --- | --- |
 | Quién soy | Nombre, rol, ubicación, disponibilidad, presentación, retrato |
 | Qué sé hacer | Diseño UX, UI, front-end, herramientas |
-| Qué hice | Cubrí Seguros, Coffea, ejercicios de maquetado, cifras |
+| Qué hice | Cubrí Seguros, Corte, Potencia, Coffea, ejercicios de maquetado, cifras |
 | De dónde vengo | Carrera, materia, trabajo final |
 | Cómo trabajo | Principios |
 | Cómo hablarme | Email, LinkedIn, GitHub, formulario |

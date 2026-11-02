@@ -20,6 +20,7 @@ grep -rn "Completar:" --include=*.html .
 - [ ] Disponibilidad en el hero.
 - [ ] URL de LinkedIn en contacto y footer.
 - [ ] Año de ingreso y un logro de la carrera en la timeline.
+- [ ] Año, stack y rol en las tarjetas de Corte y Potencia.
 - [ ] Revisar los textos de "Sobre mí" y la ubicación, escritos a partir de los TP y de la sede de la consigna.
 - [ ] Reemplazar la ilustración por una foto si preferís una foto real.
 - [ ] Crear el archivo de Figma a partir de `docs/`: research, wireframes, design system y prototipo mobile y desktop.
@@ -104,7 +105,7 @@ El formulario de Netlify solo se puede probar una vez publicado.
 
 - Sin templates: el diseño y el código son propios de este trabajo.
 - Fuentes: [Overpass](https://fonts.google.com/specimen/Overpass) y [Atkinson Hyperlegible](https://fonts.google.com/specimen/Atkinson+Hyperlegible), licencia OFL, instaladas desde Fontsource.
-- Imágenes: capturas propias de TP3, TP4 y TP5.
+- Imágenes: capturas de TP3, TP4, TP5 y de los sitios publicados de Corte y Potencia.
 
 ## Uso de IA
 
