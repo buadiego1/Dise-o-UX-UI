@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Diego Bua | Diseño UX/UI y front-end</title>
+  <meta name="description" content="Portfolio de Diego Bua, estudiante de Sistemas de Información. Casos de estudio de UX/UI y front-end, del problema al resultado.">
+  <meta name="theme-color" content="#2438cc">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:title" content="Diego Bua | Diseño UX/UI y front-end">
+  <meta property="og:description" content="Casos de estudio de UX/UI y front-end, del problema al resultado.">
+  <meta property="og:image" content="https://diegobua.netlify.app/assets/img/og-image.png">
+  <meta property="og:url" content="https://diegobua.netlify.app/">
+  <link rel="canonical" href="https://diegobua.netlify.app/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/overpass-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/theme.js"></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="site-header__bar">
+      <a class="logo" href="#inicio" aria-label="Diego Bua, ir al inicio">
+        <span class="logo__stop" aria-hidden="true"></span>DB
+      </a>
+      <nav id="site-nav" class="site-nav" aria-label="Principal">
+        <ul class="site-nav__list">
+          <li><a href="#metricas">Cifras</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#experiencia">Experiencia</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li class="site-nav__extra"><a href="https://github.com/buadiego1" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        </ul>
+      </nav>
+      <a class="icon-button site-header__github" href="https://github.com/buadiego1" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Diego Bua">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.9c-2.8.6-3.4-1.2-3.4-1.2-.5-1.1-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.600 9.600 0 0 1 5 0c2-1.300 2.800-1 2.800-1 .5 1.400.2 2.400.1 2.700.6.700 1 1.600 1 2.700 0 3.900-2.400 4.700-4.600 5 .4.300.7.900.7 1.900V21c0 .3.200.6.700.5A10 10 0 0 0 12 2Z"/></svg>
+      </a>
+      <button class="icon-button theme-toggle" type="button" aria-label="Cambiar entre modo claro y oscuro">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.500A8 8 0 0 1 9.500 4 8 8 0 1 0 20 14.500Z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.500 1.500M17.500 17.500 19 19M5 19l1.500-1.500M17.500 6.500 19 5"/></svg>
+      </button>
+      <a class="button button--small site-header__cta" href="#contacto">Escribirme</a>
+      <button class="icon-button menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenido" tabindex="-1">
+    <section id="inicio" class="hero" aria-labelledby="titulo-inicio">
+      <div class="hero__inner">
+        <p class="badge"><span class="badge__dot" aria-hidden="true"></span><span class="todo">Completar: disponibilidad</span></p>
+        <h1 id="titulo-inicio">Diego Bua</h1>
+        <p class="hero__role">Estudiante de Sistemas de Información, diseño UX/UI y front-end</p>
+        <p class="hero__value">Diseño recorridos que se entienden a la primera y los llevo a código accesible.</p>
+        <div class="hero__actions">
+          <a class="button" href="#proyectos">Ver proyectos</a>
+          <a class="button button--ghost" href="#contacto">Escribirme</a>
+        </div>
+        <p class="hero__place">Concepción del Uruguay, Argentina (GMT-3)</p>
+      </div>
+    </section>
+
+    <div class="route">
+      <div class="route__fill" aria-hidden="true"></div>
+    </div>
+  </main>
+</body>
+</html>
