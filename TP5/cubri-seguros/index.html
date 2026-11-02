@@ -28,6 +28,7 @@
     }
   </style>
   <link rel="stylesheet" href="css/tokens.css">
+  <script type="module" src="js/app.js"></script>
 </head>
 <body class="min-h-dvh bg-page text-ink antialiased">
 
@@ -49,7 +50,7 @@
   </header>
 
   <!-- Barra superior del checkout en mobile -->
-  <div id="barra-mobile" class="flex h-14 items-center gap-3 border-b border-line bg-white px-5 lg:hidden">
+  <div id="barra-mobile" hidden class="flex h-14 items-center gap-3 border-b border-line bg-white px-5 lg:hidden">
     <button type="button" data-accion="volver" class="grid size-8 place-items-center rounded-lg text-ink" aria-label="Volver">
       <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
     </button>
@@ -59,7 +60,7 @@
   <main class="mx-auto max-w-[1440px] lg:px-20 lg:py-10">
 
     <!-- 01 · Inicio / Catálogo -->
-    <section data-paso="0" class="grid gap-5 px-5 py-6 max-lg:pb-28 lg:grid-cols-2 lg:gap-16 lg:px-0 lg:py-8">
+    <section data-paso="0" hidden class="grid gap-5 px-5 py-6 max-lg:pb-28 lg:grid-cols-2 lg:gap-16 lg:px-0 lg:py-8">
       <div class="lg:self-center">
         <span class="mb-5 hidden rounded-md bg-emerald-50 px-2 py-1 text-xs font-semibold text-ok lg:inline-block">Primer mes con 20% OFF</span>
         <h1 class="text-2xl leading-tight font-extrabold tracking-tight lg:text-5xl">Protegé lo que más usás en menos de 3 minutos</h1>
@@ -128,27 +129,19 @@
     </section>
 
     <!-- Checkout (pasos 1 a 4) -->
-    <div id="checkout">
+    <div id="checkout" hidden>
       <p class="hidden text-xs font-semibold text-brand lg:block">Seguro de Celular</p>
       <h2 id="titulo-paso" tabindex="-1" class="titulo mb-5 hidden outline-none lg:mt-1 lg:block">Contanos sobre tu celular</h2>
 
       <nav aria-label="Progreso de la contratación" class="border-b border-line bg-white px-5 py-3 lg:mb-6 lg:rounded-xl lg:border lg:px-5">
-        <ol id="stepper" class="flex items-center gap-2 text-xs font-semibold">
-          <li class="flex items-center gap-1.5 text-brand"><span class="grid size-6 place-items-center rounded-full bg-brand text-white">1</span>Cotizar</li>
-          <li class="h-px flex-1 bg-line" aria-hidden="true"></li>
-          <li class="flex items-center gap-1.5 text-mute"><span class="grid size-6 place-items-center rounded-full border border-line">2</span>Plan</li>
-          <li class="h-px flex-1 bg-line" aria-hidden="true"></li>
-          <li class="flex items-center gap-1.5 text-mute"><span class="grid size-6 place-items-center rounded-full border border-line">3</span>Datos</li>
-          <li class="h-px flex-1 bg-line" aria-hidden="true"></li>
-          <li class="flex items-center gap-1.5 text-mute"><span class="grid size-6 place-items-center rounded-full border border-line">4</span>Pago</li>
-        </ol>
+        <ol id="stepper" class="flex items-center gap-2 text-xs font-semibold"></ol>
       </nav>
 
       <div class="grid items-start lg:grid-cols-[1fr_380px] lg:gap-8">
         <form id="form-checkout" class="card gap-0 max-lg:rounded-none max-lg:border-0 max-lg:bg-transparent max-lg:pb-44 max-lg:shadow-none lg:border-line lg:p-6 lg:shadow-none" novalidate>
 
           <!-- 02 · Cotizar (Paso 1) -->
-          <section data-paso="1" class="max-lg:p-5">
+          <section data-paso="1" hidden class="max-lg:p-5">
             <h2 class="titulo mb-4 lg:hidden">Contanos sobre tu celular</h2>
             <div class="grid gap-4 lg:grid-cols-2">
               <div role="group" class="field">
@@ -196,7 +189,7 @@
           </section>
 
           <!-- 03 · Elegir plan (Paso 2) -->
-          <section data-paso="2" class="max-lg:p-5">
+          <section data-paso="2" hidden class="max-lg:p-5">
             <fieldset>
               <legend class="sr-only">Elegí tu plan</legend>
               <div id="lista-planes" class="grid gap-3 lg:grid-cols-3">
@@ -208,7 +201,7 @@
           </section>
 
           <!-- 04 · Datos personales (Paso 3) -->
-          <section data-paso="3" class="max-lg:p-5">
+          <section data-paso="3" hidden class="max-lg:p-5">
             <div class="grid grid-cols-2 gap-x-3 gap-y-4 lg:grid-cols-3">
               <div role="group" class="field">
                 <label for="nombre">Nombre</label>
@@ -251,7 +244,7 @@
           </section>
 
           <!-- 05 · Pago (Paso 4) -->
-          <section data-paso="4" class="max-lg:p-5">
+          <section data-paso="4" hidden class="max-lg:p-5">
             <div class="grid grid-cols-2 gap-x-3 gap-y-4">
               <fieldset class="col-span-full grid gap-3 lg:grid-cols-2">
                 <legend class="sr-only">Medio de pago</legend>
@@ -315,7 +308,7 @@
     </div>
 
     <!-- 06 · Éxito -->
-    <section data-paso="5" class="px-5 py-8 max-lg:pb-40 lg:py-4">
+    <section data-paso="5" hidden class="px-5 py-8 max-lg:pb-40 lg:py-4">
       <div class="card mx-auto max-w-[37.5rem] items-center gap-3 p-0 text-center max-lg:rounded-none max-lg:border-0 max-lg:bg-transparent max-lg:shadow-none lg:border-line lg:p-10 lg:shadow-none">
         <span class="grid size-20 place-items-center rounded-full bg-emerald-50 text-ok" aria-hidden="true">
           <svg class="size-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>
@@ -332,7 +325,7 @@
     </section>
 
     <!-- 07 · Error de pago -->
-    <section data-paso="6" class="px-5 py-20 max-lg:pb-44 lg:py-4">
+    <section data-paso="6" hidden class="px-5 py-20 max-lg:pb-44 lg:py-4">
       <div class="card mx-auto max-w-[37.5rem] items-center gap-3 p-0 text-center max-lg:rounded-none max-lg:border-0 max-lg:bg-transparent max-lg:shadow-none lg:border-line lg:p-10 lg:shadow-none">
         <span class="grid size-20 place-items-center rounded-full bg-red-50 text-err" aria-hidden="true">
           <svg class="size-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
