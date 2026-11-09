@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test de usabilidad | Diego Bua</title>
+  <meta name="description" content="Resultados del test de usabilidad del portfolio de Diego Bua.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#7a1f2b">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="design-system.css">
+  <script src="../js/theme.js"></script>
+</head>
+<body>
+  <main class="ds" id="contenido">
+    <h1>Test de usabilidad</h1>
+    <p>Portfolio de Diego Bua, probado en <a href="https://portfoliobua.netlify.app/" target="_blank" rel="noopener noreferrer">portfoliobua.netlify.app</a>.</p>
+    <p class="ds-note">Resultados simulados para el trabajo académico.</p>
+
+    <dl class="test-facts">
+      <div><dt>Fecha</dt><dd>09/11/2026</dd></div>
+      <div><dt>Participantes</dt><dd>Luca, Valentín y Luciano</dd></div>
+      <div><dt>Escala</dt><dd>Sí sin ayuda, Parcial con una pista, No si abandonó</dd></div>
+    </dl>
+
+    <h2>Resultados por tarea</h2>
+    <div class="table-scroll" role="region" aria-labelledby="titulo-resultados" tabindex="0">
+      <table class="ds-table test-table test-table--tasks">
+        <caption id="titulo-resultados" class="visually-hidden">Resultado de cada participante por tarea</caption>
+        <thead>
+          <tr><th scope="col">Tarea</th><th scope="col">Luca<br><span class="test-date">09/11/2026</span></th><th scope="col">Valentín<br><span class="test-date">09/11/2026</span></th><th scope="col">Luciano<br><span class="test-date">09/11/2026</span></th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">1. Decir a qué se dedica y si está disponible</th><td data-label="Luca"><span class="result result--si">Sí</span></td><td data-label="Valentín"><span class="result result--si">Sí</span></td><td data-label="Luciano"><span class="result result--si">Sí</span></td></tr>
+          <tr><th scope="row">2. Encontrar el email</th><td data-label="Luca"><span class="result result--si">Sí</span></td><td data-label="Valentín"><span class="result result--si">Sí</span></td><td data-label="Luciano"><span class="result result--parcial">Parcial</span></td></tr>
+          <tr><th scope="row">3. Abrir el proyecto más reciente</th><td data-label="Luca"><span class="result result--si">Sí</span></td><td data-label="Valentín"><span class="result result--parcial">Parcial</span></td><td data-label="Luciano"><span class="result result--si">Sí</span></td></tr>
+          <tr><th scope="row">4. Contar qué problema resolvía y cómo terminó</th><td data-label="Luca"><span class="result result--parcial">Parcial</span></td><td data-label="Valentín"><span class="result result--parcial">Parcial</span></td><td data-label="Luciano"><span class="result result--si">Sí</span></td></tr>
+          <tr><th scope="row">5. Encontrar su GitHub</th><td data-label="Luca"><span class="result result--si">Sí</span></td><td data-label="Valentín"><span class="result result--no">No</span></td><td data-label="Luciano"><span class="result result--si">Sí</span></td></tr>
+          <tr><th scope="row">6. En celular, abrir el menú e ir a Experiencia</th><td data-label="Luca"><span class="result result--si">Sí</span></td><td data-label="Valentín"><span class="result result--si">Sí</span></td><td data-label="Luciano"><span class="result result--parcial">Parcial</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Reseñas</h2>
+    <div class="reviews">
+      <article class="principle">
+        <h3>Luca</h3>
+        <p>Luca navegó por el sitio sin mayores inconvenientes. Identificó rápidamente la profesión y disponibilidad del diseñador, encontró el email y pudo acceder a los proyectos. Tuvo algunas dudas al explicar el resultado del proyecto más reciente, ya que necesitó leer nuevamente su descripción.</p>
+      </article>
+      <article class="principle">
+        <h3>Valentín</h3>
+        <p>Valentín comprendió rápidamente de qué trata el portfolio y encontró los medios de contacto. Sin embargo, tuvo dificultades para identificar cuál era el proyecto más reciente y localizar GitHub. En la versión móvil pudo navegar correctamente hasta Experiencia.</p>
+      </article>
+      <article class="principle">
+        <h3>Luciano</h3>
+        <p>Luciano logró comprender el propósito del sitio y explorar los proyectos de manera autónoma. Encontró GitHub y pudo explicar correctamente el objetivo del proyecto más reciente. Tuvo una pequeña dificultad para localizar el email y necesitó unos segundos para encontrar la sección Experiencia desde el menú móvil.</p>
+      </article>
+    </div>
+
+    <h2>Resumen de resultados</h2>
+    <div class="table-scroll" role="region" aria-labelledby="titulo-resumen" tabindex="0">
+      <table class="ds-table test-table test-table--compact">
+        <caption id="titulo-resumen" class="visually-hidden">Cantidad de resultados por participante</caption>
+        <thead>
+          <tr><th scope="col">Participante</th><th scope="col">Sí</th><th scope="col">Parcial</th><th scope="col">No</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Luca</th><td>5</td><td>1</td><td>0</td></tr>
+          <tr><th scope="row">Valentín</th><td>3</td><td>2</td><td>1</td></tr>
+          <tr><th scope="row">Luciano</th><td>4</td><td>2</td><td>0</td></tr>
+        </tbody>
+        <tfoot>
+          <tr><th scope="row">Total</th><td>12</td><td>5</td><td>1</td></tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <h2>Conclusión</h2>
+    <p>En general, el portfolio permite identificar rápidamente la información principal y navegar por sus secciones. Los puntos que podrían mejorarse son la visibilidad del acceso a GitHub, la identificación de los proyectos y la facilidad para encontrar información de contacto y navegar desde dispositivos móviles.</p>
+  </main>
+</body>
+</html>

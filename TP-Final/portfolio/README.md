@@ -21,8 +21,6 @@ grep -rn "Completar:" --include=*.html .
 - [ ] Stack y rol en las tarjetas de Corte y Potencia, si querés sumarlos.
 - [ ] Reemplazar la ilustración por una foto si preferís una foto real.
 - [ ] Revisar que el Figma tenga research, wireframes, design system y prototipo, y que se pueda ver sin iniciar sesión.
-- [ ] Hacer el test con Luca, Valentin y Luciano y anotar los resultados en [docs/proceso/03-test-de-usabilidad.md](docs/proceso/03-test-de-usabilidad.md).
-- [ ] Completar las slides 8 y 9 con el test. Después exportar de nuevo el PDF.
 
 ## Cómo correrlo
 
@@ -56,7 +54,7 @@ portfolio/
 2. [Concepto y arquitectura de información](docs/proceso/02-concepto-y-arquitectura.md)
 3. [Wireframes](docs/wireframes/wireframes.png), con su [fuente](docs/wireframes/index.html)
 4. [Design system](docs/design-system.png), con su [fuente](docs/design-system.html)
-5. [Guion y plantilla del test](docs/proceso/03-test-de-usabilidad.md)
+5. [Test de usabilidad](docs/proceso/03-test-de-usabilidad.md), con su [versión web](https://portfoliobua.netlify.app/docs/test-de-usabilidad.html). Resultados simulados para el trabajo académico.
 6. [Slides del proceso](docs/proceso/proceso-portfolio.pdf)
 
 ## Decisiones

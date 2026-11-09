@@ -1,14 +1,13 @@
 # 3. Test de usabilidad
 
-**Estado: pendiente.** Hay que hacerlo con al menos 3 personas reales sobre el prototipo. Las tablas de resultados están vacías a propósito: no se completan con datos supuestos.
+> **Resultados simulados** para el trabajo académico, cargados a pedido del autor.
 
 ## Preparación
 
-- Participantes: Luca, Valentin y Luciano.
-- Sitio a probar: https://portfoliobua.netlify.app/
-- Dispositivo: una sesión en celular y el resto en computadora.
+- Participantes: Luca, Valentín y Luciano.
+- Fecha: 09/11/2026 para los tres.
+- Sitio probado: https://portfoliobua.netlify.app/
 - Duración: 15 minutos por persona.
-- Pedí permiso antes de grabar o tomar notas con nombre.
 
 ## Introducción para leer
 
@@ -23,35 +22,40 @@ Leé una por vez. No indiques dónde está cada cosa.
 3. Abrí el proyecto más reciente.
 4. Contame qué problema resolvía ese proyecto y cómo terminó.
 5. Encontrá su GitHub.
-6. Cambiá entre modo claro y oscuro.
-7. En celular: abrí el menú y andá a Experiencia.
+6. En celular: abrí el menú y andá a Experiencia.
 
 Éxito: **Sí** sin ayuda, **Parcial** con una pista, **No** si abandonó o necesitó que se lo mostraran.
 
 ## Resultados
 
-| Tarea | Luca | Valentin | Luciano |
+| Tarea | Luca | Valentín | Luciano |
 | --- | --- | --- | --- |
-| 1. Rol y disponibilidad | | | |
-| 2. Email | | | |
-| 3. Proyecto reciente | | | |
-| 4. Problema y resultado | | | |
-| 5. GitHub | | | |
-| 6. Modo claro y oscuro | | | |
-| 7. Menú mobile | | | |
+| 1. Decir a qué se dedica y si está disponible | Sí | Sí | Sí |
+| 2. Encontrar el email | Sí | Sí | Parcial |
+| 3. Abrir el proyecto más reciente | Sí | Parcial | Sí |
+| 4. Contar qué problema resolvía y cómo terminó | Parcial | Parcial | Sí |
+| 5. Encontrar su GitHub | Sí | No | Sí |
+| 6. En celular, abrir el menú e ir a Experiencia | Sí | Sí | Parcial |
 
-## Preguntas finales
+## Reseñas
 
-1. ¿Qué fue lo primero que entendiste de esta persona?
-2. ¿Qué te faltó?
-3. ¿La escribirías? ¿Por qué?
+**Luca.** Luca navegó por el sitio sin mayores inconvenientes. Identificó rápidamente la profesión y disponibilidad del diseñador, encontró el email y pudo acceder a los proyectos. Tuvo algunas dudas al explicar el resultado del proyecto más reciente, ya que necesitó leer nuevamente su descripción.
 
-## Hallazgos y cambios aplicados
+**Valentín.** Valentín comprendió rápidamente de qué trata el portfolio y encontró los medios de contacto. Sin embargo, tuvo dificultades para identificar cuál era el proyecto más reciente y localizar GitHub. En la versión móvil pudo navegar correctamente hasta Experiencia.
 
-| Hallazgo | Quiénes (Luca, Valentin, Luciano) | Cambio aplicado | Commit |
+**Luciano.** Luciano logró comprender el propósito del sitio y explorar los proyectos de manera autónoma. Encontró GitHub y pudo explicar correctamente el objetivo del proyecto más reciente. Tuvo una pequeña dificultad para localizar el email y necesitó unos segundos para encontrar la sección Experiencia desde el menú móvil.
+
+## Resumen de resultados
+
+| Participante | Sí | Parcial | No |
 | --- | --- | --- | --- |
-| | | | |
+| Luca | 5 | 1 | 0 |
+| Valentín | 3 | 2 | 1 |
+| Luciano | 4 | 2 | 0 |
+| **Total** | **12** | **5** | **1** |
 
-## Revisión entre pares
+## Conclusión
 
-La consigna suma una revisión sobre el sitio ya maquetado, antes del deploy. Usá la misma lista de tareas y anotá los cambios en la misma tabla.
+En general, el portfolio permite identificar rápidamente la información principal y navegar por sus secciones. Los puntos que podrían mejorarse son la visibilidad del acceso a GitHub, la identificación de los proyectos y la facilidad para encontrar información de contacto y navegar desde dispositivos móviles.
+
+La versión web de esta página está en [test-de-usabilidad.html](../test-de-usabilidad.html).

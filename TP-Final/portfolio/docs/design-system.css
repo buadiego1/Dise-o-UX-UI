@@ -86,3 +86,76 @@
 
 .ds-sitemap { list-style: decimal; padding-left: var(--space-6); }
 .ds-sitemap ul { list-style: disc; padding-left: var(--space-6); }
+
+/* Test de usabilidad */
+.test-facts {
+  display: grid;
+  gap: var(--space-4);
+  margin: var(--space-6) 0 0;
+}
+
+.test-facts dt { color: var(--text-soft); font-size: var(--text-sm); }
+.test-facts dd { margin: 0; font-weight: 700; }
+
+.table-scroll {
+  overflow-x: auto;
+  border: 1px solid var(--line-rest);
+  border-radius: var(--radius-plate);
+}
+
+.table-scroll:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+
+.test-table { min-width: 36rem; }
+.test-table thead th { vertical-align: bottom; }
+.test-table tbody th { font-weight: 400; }
+.test-table tfoot th,
+.test-table tfoot td { font-weight: 700; border-bottom: 0; background: var(--surface-strong); }
+
+.test-date { color: var(--text-soft); font-size: var(--text-sm); font-weight: 400; }
+
+.result {
+  display: inline-block;
+  min-width: 4.5rem;
+  padding: var(--space-1) var(--space-3);
+  border: 2px solid var(--primary);
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  text-align: center;
+}
+
+.result--si { background: var(--primary); color: var(--on-primary); }
+.result--parcial { background: var(--surface-strong); color: var(--text); }
+.result--no { border-style: dashed; background: transparent; color: var(--text); }
+
+.reviews { display: grid; gap: var(--space-4); }
+
+@media (min-width: 768px) {
+  .test-facts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .reviews { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+.test-table tbody th { background: transparent; }
+.test-table--compact { min-width: 0; }
+.reviews .principle { align-content: start; }
+
+/* En celular, cada tarea es una tarjeta con el resultado de cada participante */
+@media (max-width: 767px) {
+  .table-scroll:has(.test-table--tasks) { overflow: visible; border: 0; }
+  .test-table--tasks { min-width: 0; }
+  .test-table--tasks thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .test-table--tasks tbody,
+  .test-table--tasks tr { display: block; }
+  .test-table--tasks tr {
+    margin-bottom: var(--space-3);
+    border: 1px solid var(--line-rest);
+    border-radius: var(--radius-plate);
+  }
+  .test-table--tasks tbody th { display: block; font-weight: 700; }
+  .test-table--tasks td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .test-table--tasks td::before { content: attr(data-label); }
+  .test-table--tasks tr > :last-child { border-bottom: 0; }
+}
