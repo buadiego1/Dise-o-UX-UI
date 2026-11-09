@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research del portfolio</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="design-system.css">
+</head>
+<body>
+  <main class="ds">
+    <h1>Research</h1>
+    <p>Usuario objetivo, benchmark, concepto visual y arquitectura de información del portfolio de Diego Bua.</p>
+
+    <h2>Proto-persona: Carla Méndez</h2>
+    <p class="ds-note">Hipótesis para orientar el diseño, no una persona entrevistada.</p>
+    <table class="ds-table">
+      <tr><th>Rol</th><td>Diseñadora senior en un estudio de producto, participa en la selección de juniors</td></tr>
+      <tr><th>Contexto</th><td>Revisa varios portfolios en una tarde, muchas veces desde el celular</td></tr>
+      <tr><th>Objetivo</th><td>Decidir rápido si vale la pena abrir un caso y escribirle a la persona</td></tr>
+      <tr><th>Frustraciones</th><td>Pantallas lindas sin decisiones explicadas y contacto escondido</td></tr>
+      <tr><th>En menos de 30 s necesita</th><td>Qué hace Diego, si está disponible y cómo escribirle, y un proyecto para abrir</td></tr>
+    </table>
+
+    <h2>Escenario de uso</h2>
+    <p>Carla recibe el link por LinkedIn entre dos reuniones y lo abre en el celular. Lee el nombre, el rol y la disponibilidad. Toca "Ver proyectos", abre Cubrí Seguros y recorre el caso de problema a resultado. Vuelve al inicio y escribe desde "Escribirme".</p>
+
+    <h2>Benchmark</h2>
+    <table class="ds-table">
+      <tr><th>Portfolio</th><th>Qué funciona</th><th>Qué no funciona para este caso</th></tr>
+      <tr><td>Brittany Chiang</td><td>Rol y propuesta en una línea, salto al contenido, experiencia con fechas</td><td>Sin llamado a contactar ni disponibilidad</td></tr>
+      <tr><td>Rauno Freiberg</td><td>Personalidad con poco texto, copiar el email con confirmación</td><td>Los proyectos no están en la portada</td></tr>
+      <tr><td>Paco Coursey</td><td>Lectura rápida, contacto directo con mailto</td><td>Proyectos de una línea, sin proceso</td></tr>
+    </table>
+
+    <h2>Concepto: el recorrido</h2>
+    <p class="ds-t3">Claro, conectado, cuidadoso</p>
+    <p>Los trabajos de Diego son flujos, así que el sitio se lee como un plano de transporte: una línea une las secciones y las paradas marcan dónde estás.</p>
+    <table class="ds-table">
+      <tr><th>Palabra</th><th>Color</th><th>Tipografía</th><th>Imágenes</th></tr>
+      <tr><td>Claro</td><td>Fondo blanco y bordo como color de acción</td><td>Overpass, de la señalética vial</td><td>Capturas reales de los proyectos</td></tr>
+      <tr><td>Conectado</td><td>Línea continua blanca sobre el hero y bordo sobre el contenido</td><td>Títulos grandes alineados a la línea</td><td>Ilustración de un recorrido con las iniciales</td></tr>
+      <tr><td>Cuidadoso</td><td>Contraste AA verificado</td><td>Atkinson Hyperlegible para leer</td><td>Texto alternativo en cada imagen</td></tr>
+    </table>
+    <ul class="ds-swatches ds-swatches--small">
+      <li><span class="ds-chip ds-c1"></span>#7A1F2B</li>
+      <li><span class="ds-chip ds-c3"></span>#5E1621</li>
+      <li><span class="ds-chip ds-c5"></span>#2B0A10</li>
+      <li><span class="ds-chip ds-c7"></span>#9C7B80</li>
+      <li><span class="ds-chip ds-c8"></span>#F7ECEE</li>
+      <li><span class="ds-chip ds-c2"></span>#FFFFFF</li>
+    </ul>
+
+    <h2>Sitemap</h2>
+    <ol class="ds-sitemap">
+      <li>Inicio (hero)</li>
+      <li>Cifras</li>
+      <li>Skills</li>
+      <li>Proyectos
+        <ul><li>Caso de estudio: Cubrí Seguros</li><li>Caso de estudio: Coffea</li></ul>
+      </li>
+      <li>Experiencia y formación</li>
+      <li>Sobre mí</li>
+      <li>Contacto</li>
+      <li>Footer</li>
+    </ol>
+
+    <h2>Card sorting</h2>
+    <p class="ds-note">Ejercicio cerrado hecho por el autor con su propio contenido.</p>
+    <table class="ds-table">
+      <tr><th>Grupo</th><th>Tarjetas</th></tr>
+      <tr><td>Quién soy</td><td>Nombre, rol, ubicación, disponibilidad, presentación, retrato</td></tr>
+      <tr><td>Qué sé hacer</td><td>Diseño UX, UI, front-end, herramientas</td></tr>
+      <tr><td>Qué hice</td><td>Cubrí Seguros, Corte, Potencia, Coffea, ejercicios de maquetado, cifras</td></tr>
+      <tr><td>De dónde vengo</td><td>Licenciatura y trabajo final</td></tr>
+      <tr><td>Cómo trabajo</td><td>Principios</td></tr>
+      <tr><td>Cómo hablarme</td><td>Email, LinkedIn, GitHub, formulario</td></tr>
+    </table>
+  </main>
+</body>
+</html>

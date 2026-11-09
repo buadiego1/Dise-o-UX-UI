@@ -63,3 +63,26 @@
 .ds-card { max-width: 24rem; }
 .ds-timeline { padding-left: var(--rail); }
 .ds-field { max-width: 24rem; }
+
+.ds-note { color: var(--text-soft); font-size: var(--text-sm); }
+
+.ds-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+}
+
+.ds-table th,
+.ds-table td {
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--line-rest);
+  text-align: left;
+  vertical-align: top;
+}
+
+.ds-table th { background: var(--surface-strong); }
+
+.ds-swatches--small { margin-top: var(--space-6); grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr)); }
+
+.ds-sitemap { list-style: decimal; padding-left: var(--space-6); }
+.ds-sitemap ul { list-style: disc; padding-left: var(--space-6); }
