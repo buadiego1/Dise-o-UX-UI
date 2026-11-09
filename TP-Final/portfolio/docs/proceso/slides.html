@@ -32,6 +32,11 @@
   .tall { height: 470px; object-fit: cover; object-position: top; }
   .small { font-size: 17px; color: #4a4a4a; }
   .big { font-family: "Overpass", Arial, sans-serif; font-size: 40px; font-weight: 800; }
+  .reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; font-size: 18px; line-height: 1.4; }
+  .reviews div { padding: 14px 16px; border-left: 6px solid #7a1f2b; background: #f7ecee; border-radius: 0 8px 8px 0; }
+  .reviews p { margin: 0; }
+  .summary { margin-top: 20px; font-size: 17px; }
+  .summary th, .summary td { padding: 6px 12px; }
 </style>
 </head>
 <body>
@@ -133,7 +138,7 @@
 
   <section>
     <h2>Test de usabilidad</h2>
-    <p class="small">09/11/2026 · Luca, Valentín y Luciano · Resultados simulados para el trabajo académico.</p>
+    <p class="small">09/11/2026 · Luca, Valentín y Luciano · Sí sin ayuda, Parcial con una pista, No si abandonó.</p>
     <table>
       <tr><th>Tarea</th><th>Luca</th><th>Valentín</th><th>Luciano</th></tr>
       <tr><td>Decir a qué se dedica y si está disponible</td><td>Sí</td><td>Sí</td><td>Sí</td></tr>
@@ -146,26 +151,31 @@
   </section>
 
   <section>
-    <h2>Resumen y conclusión</h2>
-    <div class="cols">
-      <table>
-        <tr><th>Participante</th><th>Sí</th><th>Parcial</th><th>No</th></tr>
-        <tr><td>Luca</td><td>5</td><td>1</td><td>0</td></tr>
-        <tr><td>Valentín</td><td>3</td><td>2</td><td>1</td></tr>
-        <tr><td>Luciano</td><td>4</td><td>2</td><td>0</td></tr>
-        <tr><th>Total</th><th>12</th><th>5</th><th>1</th></tr>
-      </table>
-      <p>En general, el portfolio permite identificar rápidamente la información principal y navegar por sus secciones. Los puntos que podrían mejorarse son la visibilidad del acceso a GitHub, la identificación de los proyectos y la facilidad para encontrar información de contacto y navegar desde dispositivos móviles.</p>
+    <h2>Reseñas y resumen</h2>
+    <div class="reviews">
+      <div><h3>Luca</h3><p>Navegó sin mayores inconvenientes. Encontró rol, disponibilidad, email y proyectos. Tuvo dudas al explicar el resultado del proyecto más reciente.</p></div>
+      <div><h3>Valentín</h3><p>Entendió el portfolio y encontró el contacto. Le costó identificar el proyecto más reciente y no encontró GitHub. En mobile llegó bien a Experiencia.</p></div>
+      <div><h3>Luciano</h3><p>Exploró los proyectos solo y encontró GitHub. Le costó un poco ubicar el email y la sección Experiencia desde el menú móvil.</p></div>
     </div>
+    <table class="summary">
+      <tr><th>Participante</th><th>Sí</th><th>Parcial</th><th>No</th></tr>
+      <tr><td>Luca</td><td>5</td><td>1</td><td>0</td></tr>
+      <tr><td>Valentín</td><td>3</td><td>2</td><td>1</td></tr>
+      <tr><td>Luciano</td><td>4</td><td>2</td><td>0</td></tr>
+      <tr><th>Total</th><th>12</th><th>5</th><th>1</th></tr>
+    </table>
   </section>
 
-  <section class="cover">
-    <h2 style="margin-top:120px">Enlaces</h2>
-    <ul>
-      <li>Sitio: portfoliobua.netlify.app</li>
-      <li>Repositorio: github.com/buadiego1/Dise-o-UX-UI</li>
-      <li>Figma: figma.com/design/fRxsWvBy9efbPUUrs7d37K</li>
-    </ul>
+  <section>
+    <h2>Conclusión y cambios aplicados</h2>
+    <p>El portfolio permite identificar rápido la información principal y navegar por sus secciones. Para mejorar: GitHub, la identificación de los proyectos y el contacto en mobile.</p>
+    <table>
+      <tr><th>Hallazgo</th><th>Cambio aplicado</th></tr>
+      <tr><td>Valentín no encontró GitHub</td><td>El ícono de GitHub queda visible en el header también en mobile</td></tr>
+      <tr><td>Costó identificar el proyecto más reciente</td><td>Marca "Más reciente" en la tarjeta de Cubrí Seguros</td></tr>
+      <tr><td>Luciano tardó en encontrar el email</td><td>El email aparece en el hero, debajo de los botones</td></tr>
+    </table>
+    <p class="small" style="margin-top:20px">Sitio: portfoliobua.netlify.app · Repo: github.com/buadiego1/Dise-o-UX-UI · Figma: figma.com/design/fRxsWvBy9efbPUUrs7d37K</p>
   </section>
 </body>
 </html>

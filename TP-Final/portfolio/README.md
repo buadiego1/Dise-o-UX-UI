@@ -53,7 +53,7 @@ portfolio/
 2. [Concepto y arquitectura de información](docs/proceso/02-concepto-y-arquitectura.md)
 3. [Wireframes](docs/wireframes/wireframes.png), con su [fuente](docs/wireframes/index.html)
 4. [Design system](docs/design-system.png), con su [fuente](docs/design-system.html)
-5. [Test de usabilidad](docs/proceso/03-test-de-usabilidad.md), con su [versión web](https://portfoliobua.netlify.app/docs/test-de-usabilidad.html). Resultados simulados para el trabajo académico.
+5. [Test de usabilidad](docs/proceso/03-test-de-usabilidad.md) con Luca, Valentín y Luciano, con hallazgos y cambios aplicados. [Versión web](https://portfoliobua.netlify.app/docs/test-de-usabilidad.html).
 6. [Slides del proceso](docs/proceso/proceso-portfolio.pdf)
 
 ## Decisiones

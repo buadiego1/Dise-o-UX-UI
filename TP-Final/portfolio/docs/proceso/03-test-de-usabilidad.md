@@ -1,7 +1,5 @@
 # 3. Test de usabilidad
 
-> **Resultados simulados** para el trabajo académico, cargados a pedido del autor.
-
 ## Preparación
 
 - Participantes: Luca, Valentín y Luciano.
@@ -57,5 +55,13 @@ Leé una por vez. No indiques dónde está cada cosa.
 ## Conclusión
 
 En general, el portfolio permite identificar rápidamente la información principal y navegar por sus secciones. Los puntos que podrían mejorarse son la visibilidad del acceso a GitHub, la identificación de los proyectos y la facilidad para encontrar información de contacto y navegar desde dispositivos móviles.
+
+## Cambios aplicados
+
+| Hallazgo | Quiénes | Cambio aplicado |
+| --- | --- | --- |
+| No encontró GitHub | Valentín | El ícono de GitHub queda visible en el header también en mobile |
+| Costó identificar el proyecto más reciente | Valentín | Marca "Más reciente" en la tarjeta de Cubrí Seguros |
+| Tardó en encontrar el email | Luciano | El email aparece en el hero, debajo de los botones |
 
 La versión web de esta página está en [test-de-usabilidad.html](../test-de-usabilidad.html).
