@@ -21,9 +21,8 @@ grep -rn "Completar:" --include=*.html .
 - [ ] Stack y rol en las tarjetas de Corte y Potencia, si querés sumarlos.
 - [ ] Reemplazar la ilustración por una foto si preferís una foto real.
 - [ ] Crear el archivo de Figma a partir de `docs/`: research, wireframes, design system y prototipo mobile y desktop.
-- [ ] Hacer el test con 3 personas y la revisión entre pares en [docs/proceso/03-test-de-usabilidad.md](docs/proceso/03-test-de-usabilidad.md).
+- [ ] Hacer el test con Luca, Valentin y Luciano y anotar los resultados en [docs/proceso/03-test-de-usabilidad.md](docs/proceso/03-test-de-usabilidad.md).
 - [ ] Completar las slides 8 y 9 con el test, y el link de Figma en la 10. Después exportar de nuevo el PDF.
-- [ ] Repetir Lighthouse sobre la URL pública y reemplazar la captura.
 
 ## Cómo correrlo
 
@@ -68,11 +67,11 @@ portfolio/
 - **Orden de secciones.** Se mantiene el de la consigna, porque lleva de la propuesta a la evidencia y al contacto.
 - **Menú hamburguesa hasta 1024 px.** Además de 375, 768 y 1280 px, hay un corte en 1024 px porque la navegación completa no entra antes.
 
-## Verificación local
+## Verificación
 
-Medido el 2 de noviembre de 2026 sobre un servidor local, sin los headers de `_headers` ni CDN:
+Pruebas automáticas en local, más Lighthouse sobre el sitio publicado:
 
-- Lighthouse mobile: 100 en Performance, Accessibility, Best Practices y SEO, en la home y en el caso de Cubrí. [Captura](docs/capturas/lighthouse-mobile.png).
+- Lighthouse mobile sobre https://portfoliobua.netlify.app/ el 9 de noviembre de 2026: 99 en Performance y 100 en Accessibility, Best Practices y SEO. [Captura](docs/capturas/lighthouse-mobile.png).
 - Sin scroll horizontal ni contraste por debajo de AA en 375, 768 y 1280 px, en claro y oscuro, en las 5 páginas.
 - Un solo `h1`, sin saltos de encabezados y todas las imágenes con `alt`.
 - Recorrido con teclado en mobile, menú con `aria-expanded` y `aria-controls`, cierre con Escape y anclas sin quedar debajo del header.
