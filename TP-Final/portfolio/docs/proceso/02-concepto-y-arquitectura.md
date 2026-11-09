@@ -8,9 +8,9 @@ Los trabajos de Diego son flujos: un checkout de siete pantallas, landings que l
 
 | Palabra | Color | Tipografía | Imágenes |
 | --- | --- | --- | --- |
-| Claro | Fondo blanco, texto negro y contraste máximo. La acción principal es negra en modo claro y blanca en oscuro | Overpass, derivada de la señalética vial, para títulos que se leen de un vistazo | Capturas reales de los proyectos en escala de grises, sin mockups decorativos |
-| Conectado | Línea continua que se invierte: blanca sobre el hero negro y negra sobre el contenido | Títulos grandes alineados a la línea | Ilustración propia: un plano de recorrido con las iniciales |
-| Cuidadoso | Grises con contraste verificado. Los estados no dependen solo del color | Atkinson Hyperlegible, diseñada para la legibilidad, para el texto | Texto alternativo que describe qué muestra cada captura |
+| Claro | Fondo blanco y bordo como único color de acción, con contraste AA | Overpass, derivada de la señalética vial, para títulos que se leen de un vistazo | Capturas reales de los proyectos en escala de grises, sin mockups decorativos |
+| Conectado | Línea continua que se invierte: blanca sobre el hero bordo y bordo sobre el contenido | Títulos grandes alineados a la línea | Ilustración propia: un plano de recorrido con las iniciales |
+| Cuidadoso | Tonos de bordo con contraste verificado. Los estados no dependen solo del color | Atkinson Hyperlegible, diseñada para la legibilidad, para el texto | Texto alternativo que describe qué muestra cada captura |
 
 ## Moodboard
 
@@ -20,7 +20,7 @@ Referencias de lenguaje visual, sin copiar piezas puntuales:
 - Señalética vial: letras gruesas, placas con esquinas redondeadas.
 - Boletos y placas de andén: bloques planos en lugar de sombras.
 
-Muestras de paleta: `#000000` · `#333333` · `#767676` · `#C4C4C4` · `#EFEFEF` · `#FFFFFF`. La hoja [design-system.html](../design-system.html) las muestra aplicadas.
+Muestras de paleta: `#7A1F2B` · `#5E1621` · `#2B0A10` · `#9C7B80` · `#F7ECEE` · `#FFFFFF`. La hoja [design-system.html](../design-system.html) las muestra aplicadas.
 
 ## Diferencias con la referencia
 

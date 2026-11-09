@@ -7,13 +7,13 @@
 <style>
   @page { size: 1280px 720px; margin: 0; }
   * { box-sizing: border-box; }
-  body { margin: 0; color: #000; font: 22px/1.45 "Atkinson Hyperlegible", Verdana, sans-serif; }
+  body { margin: 0; color: #2b0a10; font: 22px/1.45 "Atkinson Hyperlegible", Verdana, sans-serif; }
   section { position: relative; width: 1280px; height: 720px; padding: 64px 80px 56px 128px; overflow: hidden; page-break-after: always; background: #fff; }
-  section::before { content: ""; position: absolute; top: 0; bottom: 0; left: 64px; width: 6px; background: #000; }
-  section::after { content: ""; position: absolute; top: 72px; left: 52px; width: 30px; height: 30px; border: 7px solid #000; border-radius: 50%; background: #fff; }
-  .cover { background: #000; color: #fff; }
+  section::before { content: ""; position: absolute; top: 0; bottom: 0; left: 64px; width: 6px; background: #7a1f2b; }
+  section::after { content: ""; position: absolute; top: 72px; left: 52px; width: 30px; height: 30px; border: 7px solid #7a1f2b; border-radius: 50%; background: #fff; }
+  .cover { background: #7a1f2b; color: #fff; }
   .cover::before { background: #fff; }
-  .cover::after { border-color: #fff; background: #000; }
+  .cover::after { border-color: #fff; background: #7a1f2b; }
   h1, h2, h3 { margin: 0 0 28px; font-family: "Overpass", Arial, sans-serif; line-height: 1.05; }
   h1 { font-size: 112px; font-weight: 900; margin-top: 120px; }
   h2 { font-size: 52px; font-weight: 800; }
@@ -23,12 +23,12 @@
   li { margin-bottom: 8px; }
   table { width: 100%; border-collapse: collapse; font-size: 18px; }
   th, td { padding: 9px 12px; border-bottom: 1px solid #767676; text-align: left; vertical-align: top; }
-  th { background: #efefef; }
+  th { background: #f7ecee; }
   .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
-  .pending { padding: 14px 18px; border: 3px dashed #000; border-radius: 8px; margin-bottom: 18px; }
+  .pending { padding: 14px 18px; border: 3px dashed #7a1f2b; border-radius: 8px; margin-bottom: 18px; }
   .swatches { display: flex; gap: 10px; margin-top: 18px; }
   .swatches span { width: 72px; height: 56px; border-radius: 8px; border: 1px solid #767676; }
-  .shot { width: 100%; border: 2px solid #000; border-radius: 8px; display: block; }
+  .shot { width: 100%; border: 2px solid #7a1f2b; border-radius: 8px; display: block; }
   .tall { height: 470px; object-fit: cover; object-position: top; }
   .small { font-size: 17px; color: #4a4a4a; }
   .big { font-family: "Overpass", Arial, sans-serif; font-size: 40px; font-weight: 800; }
@@ -75,8 +75,8 @@
       <div>
         <p class="big">Claro, conectado, cuidadoso</p>
         <p>Los trabajos de Diego son flujos, así que el sitio se lee como un plano de transporte: una línea une las secciones y las paradas marcan dónde estás.</p>
-        <ul><li><strong>Color:</strong> blanco, negro y grises, con contraste AA.</li><li><strong>Tipografía:</strong> Overpass, de la señalética vial, y Atkinson Hyperlegible para leer.</li><li><strong>Imágenes:</strong> capturas reales en escala de grises.</li></ul>
-        <div class="swatches"><span style="background:#000"></span><span style="background:#333"></span><span style="background:#767676"></span><span style="background:#c4c4c4"></span><span style="background:#efefef"></span><span style="background:#fff"></span></div>
+        <ul><li><strong>Color:</strong> bordo y blanco, con contraste AA.</li><li><strong>Tipografía:</strong> Overpass, de la señalética vial, y Atkinson Hyperlegible para leer.</li><li><strong>Imágenes:</strong> capturas reales en escala de grises.</li></ul>
+        <div class="swatches"><span style="background:#7a1f2b"></span><span style="background:#5e1621"></span><span style="background:#2b0a10"></span><span style="background:#9c7b80"></span><span style="background:#f7ecee"></span><span style="background:#fff"></span></div>
       </div>
       <img class="shot tall" src="../design-system.png" alt="">
     </div>
