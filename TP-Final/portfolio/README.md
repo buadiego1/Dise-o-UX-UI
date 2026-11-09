@@ -4,7 +4,7 @@ Portfolio web personal para Diseño UX-UI 2026, Licenciatura en Sistemas de Info
 
 | | |
 | --- | --- |
-| Sitio | Pendiente de publicar. Se propone `https://diegobua.netlify.app` |
+| Sitio | https://portfoliobua.netlify.app/ |
 | Figma | Pendiente de crear |
 | Repositorio | https://github.com/buadiego1/Dise-o-UX-UI |
 | Stack | HTML5, CSS3 con variables y JavaScript vanilla |
@@ -18,13 +18,11 @@ El sitio marca con un recuadro punteado lo que falta completar. Para encontrar t
 grep -rn "Completar:" --include=*.html .
 ```
 
-- [ ] Un segundo logro en el ítem de la Licenciatura: la consigna pide 2 logros por ítem de la timeline.
 - [ ] Stack y rol en las tarjetas de Corte y Potencia, si querés sumarlos.
 - [ ] Reemplazar la ilustración por una foto si preferís una foto real.
 - [ ] Crear el archivo de Figma a partir de `docs/`: research, wireframes, design system y prototipo mobile y desktop.
 - [ ] Hacer el test con 3 personas y la revisión entre pares en [docs/proceso/03-test-de-usabilidad.md](docs/proceso/03-test-de-usabilidad.md).
 - [ ] Completar las slides 8 y 9 con el test, y el link de Figma en la 10. Después exportar de nuevo el PDF.
-- [ ] Publicar, ajustar la URL en metadatos y este README, y agregarla a la descripción del repo.
 - [ ] Repetir Lighthouse sobre la URL pública y reemplazar la captura.
 
 ## Cómo correrlo
@@ -79,7 +77,6 @@ Medido el 2 de noviembre de 2026 sobre un servidor local, sin los headers de `_h
 - Un solo `h1`, sin saltos de encabezados y todas las imágenes con `alt`.
 - Recorrido con teclado en mobile, menú con `aria-expanded` y `aria-controls`, cierre con Escape y anclas sin quedar debajo del header.
 
-El formulario de Netlify solo se puede probar una vez publicado.
 
 ## Bonus
 
@@ -92,12 +89,14 @@ El formulario de Netlify solo se puede probar una vez publicado.
 
 ## Publicación en Netlify
 
-1. Unir la rama a `main` y subirla a GitHub.
-2. En Netlify: *Add new site*, *Import an existing project* y elegir el repo.
-3. Base directory: `TP-Final/portfolio`. Build command: vacío. Publish directory: `TP-Final/portfolio`.
-4. Comprobar en el primer deploy que Netlify tome el `netlify.toml` de esta carpeta y no el de la raíz, que publica TP4.
-5. Activar *Form detection* en la sección Forms del sitio.
-6. Cada push a `main` publica de nuevo.
+Publicado en https://portfoliobua.netlify.app/ desde este repositorio, sin subir archivos a mano.
+
+1. En Netlify: *Add new site*, *Import an existing project* y elegir el repo de GitHub.
+2. Base directory: `TP-Final/portfolio`. Build command: vacío. Publish directory: `TP-Final/portfolio`.
+3. Activar *Form detection* en la sección Forms del sitio.
+4. Cada push a `main` publica de nuevo (CI/CD).
+
+Verificado en el sitio publicado: la 404 propia y los headers de seguridad de `_headers` responden bien.
 
 ## Créditos
 

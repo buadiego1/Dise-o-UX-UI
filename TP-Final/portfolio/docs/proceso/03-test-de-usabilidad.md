@@ -4,7 +4,8 @@
 
 ## Preparación
 
-- Participantes: 3 o más, idealmente alguien que seleccione perfiles o estudie diseño.
+- Participantes: Luca, Valentin y Luciano.
+- Sitio a probar: https://portfoliobua.netlify.app/
 - Dispositivo: una sesión en celular y el resto en computadora.
 - Duración: 15 minutos por persona.
 - Pedí permiso antes de grabar o tomar notas con nombre.
@@ -29,7 +30,7 @@ Leé una por vez. No indiques dónde está cada cosa.
 
 ## Resultados
 
-| Tarea | Persona 1 | Persona 2 | Persona 3 |
+| Tarea | Luca | Valentin | Luciano |
 | --- | --- | --- | --- |
 | 1. Rol y disponibilidad | | | |
 | 2. Email | | | |
@@ -47,7 +48,7 @@ Leé una por vez. No indiques dónde está cada cosa.
 
 ## Hallazgos y cambios aplicados
 
-| Hallazgo | Personas afectadas | Cambio aplicado | Commit |
+| Hallazgo | Quiénes (Luca, Valentin, Luciano) | Cambio aplicado | Commit |
 | --- | --- | --- | --- |
 | | | | |
 

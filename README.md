@@ -41,4 +41,4 @@ Las decisiones tomadas, los bonus y las tarjetas de prueba están en el [README 
 
 - **TP4:** se publica en Netlify desde este repo, con el `netlify.toml` de la raíz.
 - **TP5:** se publica en un sitio de Netlify aparte, subiendo la carpeta `TP5/cubri-seguros`.
-- **Trabajo Final:** todavía no está publicado. Los pasos están en su [README](TP-Final/portfolio/README.md).
+- **Trabajo Final:** publicado en https://portfoliobua.netlify.app/ desde la carpeta `TP-Final/portfolio`.
