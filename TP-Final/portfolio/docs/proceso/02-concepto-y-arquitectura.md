@@ -4,7 +4,7 @@
 
 **Claro, conectado, cuidadoso.**
 
-Los tres trabajos de Diego son flujos: un checkout de siete pantallas, una landing y una serie de ejercicios que crece paso a paso. Por eso el concepto es **el recorrido**: el sitio se lee como un plano de transporte, con una línea que une las secciones y paradas que marcan dónde estás.
+Los trabajos de Diego son flujos: un checkout de siete pantallas, landings que llevan a una consulta y una serie de ejercicios que crece paso a paso. Por eso el concepto es **el recorrido**: el sitio se lee como un plano de transporte, con una línea que une las secciones y paradas que marcan dónde estás.
 
 | Palabra | Color | Tipografía | Imágenes |
 | --- | --- | --- | --- |

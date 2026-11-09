@@ -98,6 +98,15 @@ a:active {
   transform: none;
 }
 
+.skip-link:hover {
+  color: var(--on-primary);
+}
+
+.skip-link:active {
+  background: var(--primary-active);
+  color: var(--on-primary);
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -931,6 +940,11 @@ a:active {
 .field input:hover,
 .field textarea:hover {
   border-color: var(--white);
+}
+
+.field input:active,
+.field textarea:active {
+  border-color: var(--gray-300);
 }
 
 .form .button {

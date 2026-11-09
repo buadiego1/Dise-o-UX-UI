@@ -8,35 +8,161 @@
   @page { size: 1280px 720px; margin: 0; }
   * { box-sizing: border-box; }
   body { margin: 0; color: #000; font: 22px/1.45 "Atkinson Hyperlegible", Verdana, sans-serif; }
-  section { position: relative; width: 1280px; height: 720px; padding: 64px 80px 64px 128px; overflow: hidden; page-break-after: always; background: #fff; }
+  section { position: relative; width: 1280px; height: 720px; padding: 64px 80px 56px 128px; overflow: hidden; page-break-after: always; background: #fff; }
   section::before { content: ""; position: absolute; top: 0; bottom: 0; left: 64px; width: 6px; background: #000; }
   section::after { content: ""; position: absolute; top: 72px; left: 52px; width: 30px; height: 30px; border: 7px solid #000; border-radius: 50%; background: #fff; }
   .cover { background: #000; color: #fff; }
   .cover::before { background: #fff; }
   .cover::after { border-color: #fff; background: #000; }
-  h1, h2 { margin: 0 0 32px; font-family: "Overpass", Arial, sans-serif; line-height: 1.05; }
-  h1 { font-size: 112px; font-weight: 900; }
+  h1, h2, h3 { margin: 0 0 28px; font-family: "Overpass", Arial, sans-serif; line-height: 1.05; }
+  h1 { font-size: 112px; font-weight: 900; margin-top: 120px; }
   h2 { font-size: 52px; font-weight: 800; }
-  p { margin: 0 0 16px; max-width: 58rem; }
+  h3 { font-size: 26px; font-weight: 700; margin-bottom: 8px; }
+  p { margin: 0 0 14px; max-width: 58rem; }
   ul { margin: 0; padding-left: 24px; }
-  li { margin-bottom: 10px; }
-  table { width: 100%; border-collapse: collapse; font-size: 19px; }
-  th, td { padding: 10px 12px; border-bottom: 1px solid #767676; text-align: left; vertical-align: top; }
-  .pending { padding: 24px; border: 3px dashed #000; border-radius: 8px; background: #fff; }
-  .swatches { display: flex; gap: 12px; margin-top: 24px; }
-  .swatches span { width: 120px; height: 72px; border-radius: 8px; border: 1px solid #767676; }
+  li { margin-bottom: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 18px; }
+  th, td { padding: 9px 12px; border-bottom: 1px solid #767676; text-align: left; vertical-align: top; }
+  th { background: #efefef; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+  .pending { padding: 14px 18px; border: 3px dashed #000; border-radius: 8px; margin-bottom: 18px; }
+  .swatches { display: flex; gap: 10px; margin-top: 18px; }
+  .swatches span { width: 72px; height: 56px; border-radius: 8px; border: 1px solid #767676; }
+  .shot { width: 100%; border: 2px solid #000; border-radius: 8px; display: block; }
+  .tall { height: 470px; object-fit: cover; object-position: top; }
+  .small { font-size: 17px; color: #4a4a4a; }
+  .big { font-family: "Overpass", Arial, sans-serif; font-size: 40px; font-weight: 800; }
 </style>
 </head>
 <body>
-  <section class="cover"><h1>Portfolio de Diego Bua</h1><p>Proceso de diseño. Trabajo final de Diseño UX-UI, 2026.</p></section>
-  <section><h2>Usuario objetivo</h2><p><strong>Carla Méndez</strong>, proto-persona: diseñadora senior que participa en la selección de juniors.</p><p>En menos de 30 segundos necesita saber:</p><ul><li>Qué hace Diego y en qué etapa está.</li><li>Si está disponible y cómo escribirle.</li><li>Qué proyecto abrir para ver el proceso.</li></ul></section>
-  <section><h2>Benchmark</h2><table><tr><th>Portfolio</th><th>Funciona</th><th>No funciona para este caso</th></tr><tr><td>Brittany Chiang</td><td>Propuesta en una línea, salto al contenido</td><td>Sin llamado a contactar ni disponibilidad</td></tr><tr><td>Rauno Freiberg</td><td>Personalidad, copiar email con confirmación</td><td>Proyectos fuera de la portada</td></tr><tr><td>Paco Coursey</td><td>Lectura rápida, contacto directo</td><td>Proyectos sin proceso</td></tr></table></section>
-  <section><h2>Concepto: el recorrido</h2><p><strong>Claro, conectado, cuidadoso.</strong> Los trabajos de Diego son flujos, así que el sitio se lee como un plano de transporte: una línea une las secciones y las paradas marcan dónde estás.</p><div class="swatches"><span style="background:#000000"></span><span style="background:#333333"></span><span style="background:#767676"></span><span style="background:#c4c4c4"></span><span style="background:#efefef"></span><span style="background:#ffffff"></span></div></section>
-  <section><h2>Arquitectura de información</h2><p>One-page con las 9 secciones en el orden de la consigna: primero la propuesta, después la evidencia y al final el contacto.</p><ul><li>Dos casos de estudio en páginas internas.</li><li>Card sorting del contenido propio en seis grupos.</li><li>El CTA de contacto queda siempre en el header en desktop.</li></ul></section>
-  <section><h2>Decisiones de diseño</h2><ul><li>Overpass viene de la señalética vial. Atkinson Hyperlegible prioriza la lectura.</li><li>Bloques de color plano en lugar de sombras, como las placas de andén.</li><li>El email se puede copiar con confirmación, una idea tomada del benchmark.</li><li>Paleta en blanco, negro y grises, con contraste AA en modo claro y oscuro.</li></ul></section>
-  <section><h2>Implementación</h2><ul><li>HTML, CSS y JavaScript vanilla, sin frameworks ni templates.</li><li>Tokens en variables CSS, mobile-first, probado en 375, 768 y 1280 px.</li><li>Fuentes autoalojadas e imágenes WebP.</li><li>Formulario con Netlify Forms y headers de seguridad.</li></ul></section>
-  <section><h2>Hallazgos del test</h2><div class="pending"><p><strong>Pendiente.</strong> Completar con los resultados reales de las 3 sesiones, usando docs/proceso/03-test-de-usabilidad.md.</p></div></section>
-  <section><h2>Cambios aplicados</h2><div class="pending"><p><strong>Pendiente.</strong> Completar con cada hallazgo, el cambio y su commit.</p></div></section>
-  <section><h2>Figma y sitio lado a lado</h2><div class="pending"><p><strong>Pendiente.</strong> Agregar la comparación de 2 secciones cuando esté el archivo de Figma.</p></div></section>
+  <section class="cover">
+    <h1>Diego Bua</h1>
+    <p class="big">Portfolio web personal: proceso de diseño</p>
+    <p>Trabajo final de Diseño UX-UI 2026. Licenciatura en Sistemas de Información, UADER, FCyT, sede Concepción del Uruguay.</p>
+  </section>
+
+  <section>
+    <h2>Usuario objetivo</h2>
+    <div class="cols">
+      <div>
+        <h3>Proto-persona: Carla Méndez</h3>
+        <p>Diseñadora senior que participa en la selección de perfiles junior. Revisa varios portfolios en una tarde, muchas veces desde el celular.</p>
+        <p class="small">Es una hipótesis para orientar el diseño, no una persona entrevistada.</p>
+      </div>
+      <div>
+        <h3>En menos de 30 segundos necesita</h3>
+        <ul><li>Saber qué hace Diego y en qué etapa está.</li><li>Ver si está disponible y cómo escribirle.</li><li>Abrir un proyecto con el proceso a la vista.</li></ul>
+        <h3 style="margin-top:24px">Escenario</h3>
+        <p>Recibe el link por LinkedIn, lo abre en el celular, entra a Cubrí Seguros, recorre el caso y escribe desde "Escribirme".</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Benchmark</h2>
+    <table>
+      <tr><th>Portfolio</th><th>Qué funciona</th><th>Qué no funciona para este caso</th></tr>
+      <tr><td>Brittany Chiang</td><td>Rol y propuesta en una línea, salto al contenido, experiencia con fechas y tecnologías</td><td>Sin llamado a contactar ni disponibilidad</td></tr>
+      <tr><td>Rauno Freiberg</td><td>Personalidad con poco texto, copiar el email con confirmación</td><td>Los proyectos no están en la portada</td></tr>
+      <tr><td>Paco Coursey</td><td>Lectura rápida, contacto directo con mailto</td><td>Proyectos de una línea, sin proceso</td></tr>
+    </table>
+    <p style="margin-top:24px"><strong>Qué se lleva al diseño:</strong> propuesta corta, copiar email con confirmación, contacto directo y lo que falta en los tres: disponibilidad a la vista y proceso en la portada.</p>
+  </section>
+
+  <section>
+    <h2>Concepto: el recorrido</h2>
+    <div class="cols">
+      <div>
+        <p class="big">Claro, conectado, cuidadoso</p>
+        <p>Los trabajos de Diego son flujos, así que el sitio se lee como un plano de transporte: una línea une las secciones y las paradas marcan dónde estás.</p>
+        <ul><li><strong>Color:</strong> blanco, negro y grises, con contraste AA.</li><li><strong>Tipografía:</strong> Overpass, de la señalética vial, y Atkinson Hyperlegible para leer.</li><li><strong>Imágenes:</strong> capturas reales en escala de grises.</li></ul>
+        <div class="swatches"><span style="background:#000"></span><span style="background:#333"></span><span style="background:#767676"></span><span style="background:#c4c4c4"></span><span style="background:#efefef"></span><span style="background:#fff"></span></div>
+      </div>
+      <img class="shot tall" src="../design-system.png" alt="">
+    </div>
+  </section>
+
+  <section>
+    <h2>Arquitectura de información</h2>
+    <div class="cols">
+      <div>
+        <p>One-page con las 9 secciones en el orden de la consigna: primero la propuesta, después la evidencia y al final el contacto.</p>
+        <p class="small">Inicio, Cifras, Skills, Proyectos, Experiencia, Sobre mí, Contacto y footer. Dos casos de estudio en páginas internas y una 404.</p>
+      </div>
+      <table>
+        <tr><th>Card sorting</th><th>Tarjetas</th></tr>
+        <tr><td>Quién soy</td><td>Nombre, rol, ubicación, disponibilidad</td></tr>
+        <tr><td>Qué sé hacer</td><td>UX, UI, front-end, herramientas</td></tr>
+        <tr><td>Qué hice</td><td>Proyectos y cifras</td></tr>
+        <tr><td>De dónde vengo</td><td>Carrera y trabajo final</td></tr>
+        <tr><td>Cómo trabajo</td><td>Principios</td></tr>
+        <tr><td>Cómo hablarme</td><td>Email, LinkedIn, GitHub, formulario</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Decisiones de diseño</h2>
+    <div class="cols">
+      <ul>
+        <li>La línea del recorrido avanza con el scroll y se queda fija con <em>reduced motion</em>.</li>
+        <li>Bloques planos en lugar de sombras, como las placas de andén.</li>
+        <li>Disponibilidad y CTA de contacto visibles desde el primer pliegue.</li>
+        <li>Copiar el email con confirmación, tomado del benchmark.</li>
+        <li>Proyectos como casos: problema, proceso, solución y resultado.</li>
+        <li>Modo claro y oscuro con contraste AA en ambos.</li>
+      </ul>
+      <img class="shot tall" src="../capturas/desktop-1280.png" alt="">
+    </div>
+  </section>
+
+  <section>
+    <h2>Implementación</h2>
+    <div class="cols">
+      <ul>
+        <li>HTML semántico, CSS con variables y JavaScript vanilla, sin frameworks ni templates.</li>
+        <li>Mobile-first, probado en 375, 768 y 1280 px sin scroll horizontal.</li>
+        <li>Fuentes autoalojadas e imágenes WebP con carga diferida.</li>
+        <li>Navegable con teclado, link para saltar al contenido y menú con aria-expanded.</li>
+        <li>Formulario con Netlify Forms y headers de seguridad.</li>
+        <li><strong>Lighthouse mobile: 100</strong> en las cuatro categorías.</li>
+      </ul>
+      <img class="shot" src="../capturas/lighthouse-mobile.png" alt="">
+    </div>
+  </section>
+
+  <section>
+    <h2>Test de usabilidad</h2>
+    <div class="pending"><strong>Completar:</strong> fecha, participantes y resultados de las 3 sesiones.</div>
+    <table>
+      <tr><th>Tarea</th><th>Persona 1</th><th>Persona 2</th><th>Persona 3</th></tr>
+      <tr><td>Decir a qué se dedica y si está disponible</td><td></td><td></td><td></td></tr>
+      <tr><td>Encontrar el email</td><td></td><td></td><td></td></tr>
+      <tr><td>Abrir el proyecto más reciente</td><td></td><td></td><td></td></tr>
+      <tr><td>Contar qué problema resolvía y cómo terminó</td><td></td><td></td><td></td></tr>
+      <tr><td>Encontrar su GitHub</td><td></td><td></td><td></td></tr>
+      <tr><td>En celular, abrir el menú e ir a Experiencia</td><td></td><td></td><td></td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Hallazgos y cambios aplicados</h2>
+    <div class="pending"><strong>Completar</strong> con lo que observaste en las sesiones.</div>
+    <table>
+      <tr><th>Hallazgo</th><th>Personas</th><th>Cambio aplicado</th></tr>
+      <tr><td>&nbsp;</td><td></td><td></td></tr>
+      <tr><td>&nbsp;</td><td></td><td></td></tr>
+      <tr><td>&nbsp;</td><td></td><td></td></tr>
+    </table>
+  </section>
+
+  <section class="cover">
+    <h2 style="margin-top:120px">Enlaces</h2>
+    <ul>
+      <li>Sitio: diegobua.netlify.app</li>
+      <li>Repositorio: github.com/buadiego1/Dise-o-UX-UI</li>
+      <li>Figma: <strong>Completar</strong></li>
+    </ul>
+  </section>
 </body>
 </html>

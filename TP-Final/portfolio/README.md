@@ -8,6 +8,7 @@ Portfolio web personal para Diseño UX-UI 2026, Licenciatura en Sistemas de Info
 | Figma | Pendiente de crear |
 | Repositorio | https://github.com/buadiego1/Dise-o-UX-UI |
 | Stack | HTML5, CSS3 con variables y JavaScript vanilla |
+| Entregables | [PDF del proceso](../entrega/proceso-portfolio-diego-bua.pdf) · [Captura de Lighthouse mobile](../entrega/lighthouse-mobile.png) |
 
 ## Antes de entregar
 
@@ -17,14 +18,12 @@ El sitio marca con un recuadro punteado lo que falta completar. Para encontrar t
 grep -rn "Completar:" --include=*.html .
 ```
 
-- [ ] Disponibilidad en el hero.
-- [ ] Un segundo logro para el ítem de la Licenciatura, si la consigna lo exige en la corrección.
+- [ ] Un segundo logro en el ítem de la Licenciatura: la consigna pide 2 logros por ítem de la timeline.
 - [ ] Stack y rol en las tarjetas de Corte y Potencia, si querés sumarlos.
-- [ ] Revisar los textos de "Sobre mí" y la ubicación, escritos a partir de los TP y de la sede de la consigna.
 - [ ] Reemplazar la ilustración por una foto si preferís una foto real.
 - [ ] Crear el archivo de Figma a partir de `docs/`: research, wireframes, design system y prototipo mobile y desktop.
 - [ ] Hacer el test con 3 personas y la revisión entre pares en [docs/proceso/03-test-de-usabilidad.md](docs/proceso/03-test-de-usabilidad.md).
-- [ ] Completar las slides 8 a 10 y exportar de nuevo el PDF.
+- [ ] Completar las slides 8 y 9 con el test, y el link de Figma en la 10. Después exportar de nuevo el PDF.
 - [ ] Publicar, ajustar la URL en metadatos y este README, y agregarla a la descripción del repo.
 - [ ] Repetir Lighthouse sobre la URL pública y reemplazar la captura.
 
