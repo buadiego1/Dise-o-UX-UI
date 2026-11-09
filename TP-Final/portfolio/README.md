@@ -19,7 +19,7 @@ grep -rn "Completar:" --include=*.html .
 
 - [ ] Disponibilidad en el hero.
 - [ ] URL de LinkedIn en contacto y footer.
-- [ ] Año de ingreso y un logro de la carrera en la timeline.
+- [ ] Un segundo logro para el ítem de la Licenciatura, si la consigna lo exige en la corrección.
 - [ ] Año, stack y rol en las tarjetas de Corte y Potencia.
 - [ ] Revisar los textos de "Sobre mí" y la ubicación, escritos a partir de los TP y de la sede de la consigna.
 - [ ] Reemplazar la ilustración por una foto si preferís una foto real.
