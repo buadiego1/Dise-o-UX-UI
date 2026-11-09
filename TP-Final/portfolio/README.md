@@ -5,7 +5,7 @@ Portfolio web personal para Diseño UX-UI 2026, Licenciatura en Sistemas de Info
 | | |
 | --- | --- |
 | Sitio | https://portfoliobua.netlify.app/ |
-| Figma | [Archivo de Figma](https://www.figma.com/design/fRxsWvBy9efbPUUrs7d37K/Sin-t%C3%ADtulo?node-id=0-1) |
+| Figma | [Archivo de Figma](https://www.figma.com/design/fRxsWvBy9efbPUUrs7d37K/Portfolio-Diego-Bua?node-id=0-1) |
 | Repositorio | https://github.com/buadiego1/Dise-o-UX-UI |
 | Stack | HTML5, CSS3 con variables y JavaScript vanilla |
 | Entregables | [PDF del proceso](../entrega/proceso-portfolio-diego-bua.pdf) · [Captura de Lighthouse mobile](../entrega/lighthouse-mobile.png) |
@@ -20,7 +20,6 @@ grep -rn "Completar:" --include=*.html .
 
 - [ ] Stack y rol en las tarjetas de Corte y Potencia, si querés sumarlos.
 - [ ] Reemplazar la ilustración por una foto si preferís una foto real.
-- [ ] Revisar que el Figma tenga research, wireframes, design system y prototipo, y que se pueda ver sin iniciar sesión.
 
 ## Cómo correrlo
 
