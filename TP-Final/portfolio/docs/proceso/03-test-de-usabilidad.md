@@ -4,7 +4,7 @@
 
 - Participantes: Luca, Valentín y Luciano.
 - Fecha: 09/11/2026 para los tres.
-- Sitio probado: https://portfoliobua.netlify.app/
+- Sitio probado: https://tpfinaldiseno.vercel.app/
 - Duración: 15 minutos por persona.
 
 ## Introducción para leer

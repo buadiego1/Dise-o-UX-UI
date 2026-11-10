@@ -4,7 +4,7 @@ Portfolio web personal para Diseño UX-UI 2026, Licenciatura en Sistemas de Info
 
 | | |
 | --- | --- |
-| Sitio | https://portfoliobua.netlify.app/ |
+| Sitio | https://tpfinaldiseno.vercel.app/ |
 | Figma | [Archivo de Figma](https://www.figma.com/design/fRxsWvBy9efbPUUrs7d37K/Portfolio-Diego-Bua?node-id=0-1) |
 | Repositorio | https://github.com/buadiego1/Dise-o-UX-UI |
 | Stack | HTML5, CSS3 con variables y JavaScript vanilla |
@@ -53,7 +53,7 @@ portfolio/
 2. [Concepto y arquitectura de información](docs/proceso/02-concepto-y-arquitectura.md)
 3. [Wireframes](docs/wireframes/wireframes.png), con su [fuente](docs/wireframes/index.html)
 4. [Design system](docs/design-system.png), con su [fuente](docs/design-system.html)
-5. [Test de usabilidad](docs/proceso/03-test-de-usabilidad.md) con Luca, Valentín y Luciano, con hallazgos y cambios aplicados. [Versión web](https://portfoliobua.netlify.app/docs/test-de-usabilidad.html).
+5. [Test de usabilidad](docs/proceso/03-test-de-usabilidad.md) con Luca, Valentín y Luciano, con hallazgos y cambios aplicados. [Versión web](https://tpfinaldiseno.vercel.app/docs/test-de-usabilidad.html).
 6. [Slides del proceso](docs/proceso/proceso-portfolio.pdf)
 
 ## Decisiones
@@ -68,7 +68,7 @@ portfolio/
 
 Pruebas automáticas en local, más Lighthouse sobre el sitio publicado:
 
-- Lighthouse mobile sobre https://portfoliobua.netlify.app/ el 9 de noviembre de 2026: 99 en Performance y 100 en Accessibility, Best Practices y SEO. [Captura](docs/capturas/lighthouse-mobile.png).
+- Lighthouse mobile sobre https://tpfinaldiseno.vercel.app/ el 9 de noviembre de 2026: LHSCORES. [Captura](docs/capturas/lighthouse-mobile.png).
 - Sin scroll horizontal ni contraste por debajo de AA en 375, 768 y 1280 px, en claro y oscuro, en las 5 páginas.
 - Un solo `h1`, sin saltos de encabezados y todas las imágenes con `alt`.
 - Recorrido con teclado en mobile, menú con `aria-expanded` y `aria-controls`, cierre con Escape y anclas sin quedar debajo del header.
@@ -88,7 +88,7 @@ Pruebas automáticas en local, más Lighthouse sobre el sitio publicado:
 Publicado desde este repositorio, sin subir archivos a mano.
 
 1. En Vercel: *Add New* → *Project* e importar el repo de GitHub.
-2. Framework preset: *Other*. Root Directory: `TP-Final/portfolio`. Build command y output: vacíos.
+2. Framework preset: *Other*. Root Directory: la raíz del repo. El `vercel.json` de la raíz indica que se publica `TP-Final/portfolio`.
 3. Deploy. Cada push a `main` publica de nuevo (CI/CD).
 
 La configuración de Vercel está en el `vercel.json` de la raíz del repo: publica la carpeta `TP-Final/portfolio` y define los headers de seguridad y la caché. El sitio se publicó primero en Netlify (`_headers` y `netlify.toml` quedan como referencia), pero el plan gratis agotó sus créditos y pausó los deploys, así que se pasó a Vercel.
