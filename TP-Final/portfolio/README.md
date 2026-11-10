@@ -68,7 +68,7 @@ portfolio/
 
 Pruebas automáticas en local, más Lighthouse sobre el sitio publicado:
 
-- Lighthouse mobile sobre https://tpfinaldiseno.vercel.app/ el 9 de noviembre de 2026: LHSCORES. [Captura](docs/capturas/lighthouse-mobile.png).
+- Lighthouse mobile sobre https://tpfinaldiseno.vercel.app/ el 9 de noviembre de 2026: 100 en Performance, Accessibility, Best Practices y SEO. [Captura](docs/capturas/lighthouse-mobile.png).
 - Sin scroll horizontal ni contraste por debajo de AA en 375, 768 y 1280 px, en claro y oscuro, en las 5 páginas.
 - Un solo `h1`, sin saltos de encabezados y todas las imágenes con `alt`.
 - Recorrido con teclado en mobile, menú con `aria-expanded` y `aria-controls`, cierre con Escape y anclas sin quedar debajo del header.
