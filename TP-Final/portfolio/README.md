@@ -91,7 +91,7 @@ Publicado desde este repositorio, sin subir archivos a mano.
 2. Framework preset: *Other*. Root Directory: `TP-Final/portfolio`. Build command y output: vacíos.
 3. Deploy. Cada push a `main` publica de nuevo (CI/CD).
 
-Los headers de seguridad y la caché están en `vercel.json`. El sitio se publicó primero en Netlify (`_headers` y `netlify.toml` quedan como referencia), pero el plan gratis agotó sus créditos y pausó los deploys, así que se pasó a Vercel.
+La configuración de Vercel está en el `vercel.json` de la raíz del repo: publica la carpeta `TP-Final/portfolio` y define los headers de seguridad y la caché. El sitio se publicó primero en Netlify (`_headers` y `netlify.toml` quedan como referencia), pero el plan gratis agotó sus créditos y pausó los deploys, así que se pasó a Vercel.
 
 ## Créditos
 
