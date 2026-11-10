@@ -1,0 +1,17 @@
+
+* { box-sizing: border-box; }
+body { margin: 0; padding: 32px; background: #fff; color: #222; font: 14px/1.4 Arial, sans-serif; }
+h1 { font-size: 24px; margin: 0 0 24px; }
+h2 { font-size: 16px; margin: 0 0 12px; }
+.boards { display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start; }
+.frame { border: 2px solid #222; background: #fff; position: relative; }
+.mobile { width: 375px; }
+.desktop { width: 1000px; }
+.b { border: 1px dashed #777; background: #eee; padding: 8px; margin: 8px; font-size: 12px; }
+.dark { background: #bbb; border-style: solid; }
+.row { display: grid; gap: 8px; margin: 8px; }
+.row .b { margin: 0; }
+.c2 { grid-template-columns: 2fr 1fr; } .c3 { grid-template-columns: repeat(3, 1fr); } .c4 { grid-template-columns: repeat(4, 1fr); } .c2e { grid-template-columns: 1fr 1fr; }
+.rail { margin-left: 24px; border-left: 4px solid #555; padding-left: 8px; }
+.t { height: 56px; display: flex; align-items: center; }
+.h { height: 120px; } .m { height: 80px; } .s { height: 40px; }
