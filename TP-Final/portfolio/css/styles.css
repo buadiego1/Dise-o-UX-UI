@@ -1133,3 +1133,7 @@ a:active {
 .hero a:not(.button):active {
   color: var(--gray-200);
 }
+
+.form__note {
+  font-size: var(--text-sm);
+}

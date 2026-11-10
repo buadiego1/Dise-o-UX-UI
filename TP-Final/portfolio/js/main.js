@@ -79,6 +79,20 @@ if (ruta && !reducirMovimiento) {
   actualizar();
 }
 
+// Formulario: arma el email en el programa de correo de quien escribe
+const formulario = document.querySelector('.form');
+
+if (formulario) {
+  formulario.addEventListener('submit', (evento) => {
+    evento.preventDefault();
+    if (!formulario.reportValidity()) return;
+    const datos = new FormData(formulario);
+    const asunto = `Consulta de ${datos.get('nombre')}`;
+    const cuerpo = `${datos.get('mensaje')}\n\n${datos.get('nombre')} (${datos.get('email')})`;
+    window.location.href = `mailto:buadiego9@gmail.com?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
+  });
+}
+
 // Copiar el email
 const copiar = document.querySelector('.copy-email');
 

@@ -236,9 +236,7 @@
             <li><a href="https://github.com/buadiego1" target="_blank" rel="noopener noreferrer">GitHub</a></li>
           </ul>
         </div>
-        <form class="form" name="contacto" method="POST" action="gracias.html" data-netlify="true" netlify-honeypot="sitio-web">
-          <input type="hidden" name="form-name" value="contacto">
-          <p class="visually-hidden" aria-hidden="true"><label>No completar <input name="sitio-web" tabindex="-1" autocomplete="off"></label></p>
+        <form class="form" name="contacto" action="mailto:buadiego9@gmail.com" method="post" enctype="text/plain" aria-describedby="form-nota">
           <div class="field">
             <label for="nombre">Nombre</label>
             <input id="nombre" name="nombre" type="text" autocomplete="name" required>
@@ -252,6 +250,7 @@
             <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
           </div>
           <button class="button" type="submit">Enviar mensaje</button>
+          <p id="form-nota" class="form__note">Se abre tu programa de email con el mensaje listo para enviar.</p>
         </form>
       </section>
     </div>

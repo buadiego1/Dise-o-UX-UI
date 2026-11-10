@@ -77,22 +77,21 @@ Pruebas automáticas en local, más Lighthouse sobre el sitio publicado:
 ## Bonus
 
 - Modo claro y oscuro con `prefers-color-scheme` y botón.
-- Formulario con Netlify Forms y honeypot.
+- Formulario de contacto que arma el email con nombre, mensaje y asunto, listo para enviar.
 - Segundo caso de estudio, con navegación entre casos.
 - Página 404 personalizada.
 - Headers de seguridad.
 - Animación accesible de la línea.
 
-## Publicación en Netlify
+## Publicación en Vercel
 
-Publicado en https://portfoliobua.netlify.app/ desde este repositorio, sin subir archivos a mano.
+Publicado desde este repositorio, sin subir archivos a mano.
 
-1. En Netlify: *Add new site*, *Import an existing project* y elegir el repo de GitHub.
-2. Base directory: `TP-Final/portfolio`. Build command: vacío. Publish directory: `TP-Final/portfolio`.
-3. Activar *Form detection* en la sección Forms del sitio.
-4. Cada push a `main` publica de nuevo (CI/CD).
+1. En Vercel: *Add New* → *Project* e importar el repo de GitHub.
+2. Framework preset: *Other*. Root Directory: `TP-Final/portfolio`. Build command y output: vacíos.
+3. Deploy. Cada push a `main` publica de nuevo (CI/CD).
 
-Verificado en el sitio publicado: la 404 propia y los headers de seguridad de `_headers` responden bien.
+Los headers de seguridad y la caché están en `vercel.json`. El sitio se publicó primero en Netlify (`_headers` y `netlify.toml` quedan como referencia), pero el plan gratis agotó sus créditos y pausó los deploys, así que se pasó a Vercel.
 
 ## Créditos
 
